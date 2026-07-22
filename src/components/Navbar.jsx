@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/named_logo.png";
+import logo from "../assets/tru-core-logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import { servicesMenu } from "../data/services_menu";
 
