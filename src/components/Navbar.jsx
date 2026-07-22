@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
 
           <NavLink to='/' initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <img src={logo} alt="Kenayos Technology" className="h-10 w-auto" />
+            <img src={logo} alt="Trucore Technology" className="h-10 w-auto" />
           </NavLink>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -180,7 +180,7 @@ const Navbar = () => {
               className="fixed inset-y-0 right-0 w-full max-w-sm bg-white z-[999] shadow-2xl h-[100dvh] flex flex-col overflow-y-auto"
             >
               <div className="flex items-center justify-between px-5 py-4 border-b">
-                <h2 className="text-lg font-semibold">Kenayos Technology</h2>
+                <h2 className="text-lg font-semibold">Trucore Technology</h2>
                 <button onClick={() => setIsOpen(false)}>
                   <X size={24} />
                 </button>

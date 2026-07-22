@@ -23,7 +23,7 @@ const contactMethods = [
         icon: Mail,
         title: "Email Us",
         description: "Send us your inquiry anytime",
-        detail: "info@kenayos.com",
+        detail: "info@Trucore.com",
         color: "bg-purple-50",
         iconColor: "text-purple-600",
         iconBg: "bg-purple-100",
@@ -56,23 +56,23 @@ const whyContactUs = [
 ];
 
 const socialLinks = [
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/kenayos-technology" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com/kenayostech" },
-    { icon: Instagram, label: "Instagram", href: "https://instagram.com/kenayos_tech" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/Trucore-technology" },
+    { icon: Twitter, label: "Twitter", href: "https://twitter.com/Trucoretech" },
+    { icon: Instagram, label: "Instagram", href: "https://instagram.com/Trucore_tech" },
 ];
 
 export default function Contact() {
     return (
         <>
             <Helmet>
-                <title>Kenayos Technology | Contact Us</title>
-                <meta name="description" content="Get in touch with Kenayos Technology. Have questions or want to learn more? Fill out the form below or reach us at info@kenayos.com." />
-                <meta name="keywords" content="contact kenayos, get in touch, inquiry form, software development inquiry" />
-                <link rel="canonical" href="https://kenayos.com/contact" />
-                <meta property="og:title" content="Kenayos Technology | Contact Us" />
-                <meta property="og:description" content="Get in touch with Kenayos Technology. Have questions or want to learn more? Fill out the form below!" />
+                <title>Trucore Technology | Contact Us</title>
+                <meta name="description" content="Get in touch with Trucore Technology. Have questions or want to learn more? Fill out the form below or reach us at info@Trucore.com." />
+                <meta name="keywords" content="contact Trucore, get in touch, inquiry form, software development inquiry" />
+                <link rel="canonical" href="https://Trucore.com/contact" />
+                <meta property="og:title" content="Trucore Technology | Contact Us" />
+                <meta property="og:description" content="Get in touch with Trucore Technology. Have questions or want to learn more? Fill out the form below!" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://kenayos.com/contact" />
+                <meta property="og:url" content="https://Trucore.com/contact" />
                 <meta property="og:image" content={logo} />
             </Helmet>
 
@@ -193,7 +193,7 @@ export default function Contact() {
                         className="rounded-xl overflow-hidden border border-gray-100"
                     >
                         <iframe
-                            title="Kenayos Technology Location"
+                            title="Trucore Technology Location"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8634106886343!2d72.88284837540276!3d21.23726428058431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f1300c6e52f%3A0xf88307c9c18657e2!2sDhara%20Arcade!5e0!3m2!1sen!2sin!4v1777894336273!5m2!1sen!2sin"
                             width="100%"
                             height="420"

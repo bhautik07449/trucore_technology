@@ -17,7 +17,7 @@ import TeamStats from "../components/TeamStats";
 
 /* ── Inline data ── */
 const milestones = [
-    { year: "2022", title: "Founded", desc: "Kenayos Technology was founded with a mission to deliver impactful digital solutions for modern businesses." },
+    { year: "2022", title: "Founded", desc: "Trucore Technology was founded with a mission to deliver impactful digital solutions for modern businesses." },
     { year: "2023", title: "First Major Clients", desc: "Onboarded our first enterprise clients and delivered ERP and web solutions across healthcare and retail." },
     { year: "2024", title: "AI & Automation", desc: "Expanded into AI-powered products, social media automation, and intelligent business systems." },
     { year: "2025", title: "Global Presence", desc: "Grew our team and client base globally, delivering 50+ projects across 8+ industry verticals." },
@@ -34,14 +34,14 @@ export default function About() {
     return (
         <>
             <Helmet>
-                <title>Kenayos Technology | About Us</title>
-                <meta name="description" content="Learn more about Kenayos Technology — our story, mission, vision, core values, and the team behind our innovative digital solutions." />
-                <meta name="keywords" content="about kenayos, company info, mission, vision, core values, software team" />
-                <link rel="canonical" href="https://kenayos.com/about" />
-                <meta property="og:title" content="Kenayos Technology | About Us" />
-                <meta property="og:description" content="Learn more about Kenayos Technology, our mission, vision, and core values." />
+                <title>Trucore Technology | About Us</title>
+                <meta name="description" content="Learn more about Trucore Technology — our story, mission, vision, core values, and the team behind our innovative digital solutions." />
+                <meta name="keywords" content="about Trucore, company info, mission, vision, core values, software team" />
+                <link rel="canonical" href="https://Trucore.com/about" />
+                <meta property="og:title" content="Trucore Technology | About Us" />
+                <meta property="og:description" content="Learn more about Trucore Technology, our mission, vision, and core values." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://kenayos.com/about" />
+                <meta property="og:url" content="https://Trucore.com/about" />
                 <meta property="og:image" content={logo} />
             </Helmet>
 
@@ -64,7 +64,7 @@ export default function About() {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                            The <span className="text-primary">Kenayos Story</span>
+                            The <span className="text-primary">Trucore Story</span>
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                             From a small team with big ambitions to a growing technology company trusted by businesses across industries — here's how we got here.
@@ -137,7 +137,7 @@ export default function About() {
                                 <div className="p-2 bg-white/60 backdrop-blur-sm rounded-3xl border border-white/80 shadow-2xl overflow-hidden relative z-10">
                                     <img
                                         src={teamImg}
-                                        alt="Kenayos Technology Team"
+                                        alt="Trucore Technology Team"
                                         className="w-full rounded-2xl object-cover"
                                     />
                                 </div>
@@ -216,7 +216,7 @@ export default function About() {
                     >
                         <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
                             Ready to Partner with <br />
-                            <span className="text-primary">Kenayos Technology?</span>
+                            <span className="text-primary">Trucore Technology?</span>
                         </h2>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
                             Whether you have a project idea, a business challenge, or just want to say hello — our team is here and eager to help you move forward.

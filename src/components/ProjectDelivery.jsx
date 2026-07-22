@@ -59,7 +59,7 @@ export default function ProjectDelivery() {
                                 <span className="text-primary">Vision into Reality</span>
                             </h2>
                             <p className="text-lg text-textMuted mb-12 max-w-xl">
-                                At Kenayos Technology, we don't just build software; we deliver growth. Our proven framework ensures every project is delivered with precision, speed, and uncompromising quality.
+                                At Trucore Technology, we don't just build software; we deliver growth. Our proven framework ensures every project is delivered with precision, speed, and uncompromising quality.
                             </p>
 
                             <div className="space-y-8">

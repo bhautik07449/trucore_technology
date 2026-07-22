@@ -67,7 +67,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@kenayos.com",
+      content: "info@Trucore.com",
       bg: "bg-blue-50",
       iconBg: "bg-primary/10",
       iconColor: "text-primary",

@@ -65,7 +65,7 @@ export default function AboutCompany() {
                     >
                         <img
                             src={about}
-                            alt="About Kenayos Technology"
+                            alt="About Trucore Technology"
                             className="w-full max-w-[300px] lg:max-w-full h-auto object-contain drop-shadow-md"
                         />
                     </motion.div>

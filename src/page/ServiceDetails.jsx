@@ -14,16 +14,16 @@ export default function ServiceDetails() {
   return (
     <>
       <Helmet>
-        <title>Kenayos Technology | {data?.title || "Services"}</title>
-        <meta name="description" content="Discover the range of services offered by Kenayos Technology, including web development, app development, UI/UX design, and custom software solutions." />
+        <title>Trucore Technology | {data?.title || "Services"}</title>
+        <meta name="description" content="Discover the range of services offered by Trucore Technology, including web development, app development, UI/UX design, and custom software solutions." />
         <meta name="keywords" content="services, web development, app development, UI/UX design, custom software" />
 
-        <link rel="canonical" href={`https://kenayos.com/service/${serviceName}`} />
+        <link rel="canonical" href={`https://Trucore.com/service/${serviceName}`} />
 
-        <meta property="og:title" content={`Kenayos Technology | ${data?.title}`} />
-        <meta property="og:description" content="Discover the range of services offered by Kenayos Technology." />
+        <meta property="og:title" content={`Trucore Technology | ${data?.title}`} />
+        <meta property="og:description" content="Discover the range of services offered by Trucore Technology." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://kenayos.com/service/${serviceName}`} />
+        <meta property="og:url" content={`https://Trucore.com/service/${serviceName}`} />
         <meta property="og:image" content={logo} />
       </Helmet>
 

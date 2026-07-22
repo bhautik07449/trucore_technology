@@ -19,8 +19,8 @@ const Footer = () => {
 
   const socialLinks = [
     // { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
-    { name: "Twitter", icon: Twitter, href: "https://x.com/kenayostech" },
-    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/kenayos_tech?igsh=NjY4NTJpMDhmaW53" },
+    { name: "Twitter", icon: Twitter, href: "https://x.com/Trucoretech" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/Trucore_tech?igsh=NjY4NTJpMDhmaW53" },
     { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/115810898/admin/dashboard/" },
   ];
 
@@ -56,7 +56,7 @@ const Footer = () => {
         </>
       )
     },
-    { icon: Mail, content: "info@kenayos.com" },
+    { icon: Mail, content: "info@Trucore.com" },
     {
       icon: MapPin, content: (
         <>
@@ -71,7 +71,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div>
-            <img src={footerLogo} alt="Kenayos Technology" className="h-10 w-auto mb-6" />
+            <img src={footerLogo} alt="Trucore Technology" className="h-10 w-auto mb-6" />
             <p className="text-white mb-6 leading-relaxed">
               Creating innovative digital solutions for businesses worldwide. We
               transform ideas into powerful digital experiences.
@@ -162,7 +162,7 @@ const Footer = () => {
         <div className="border-t border-blue-900 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white text-center md:text-left mb-4 md:mb-0">
-              © {new Date().getFullYear()} Kenayos Technology. All rights reserved.
+              © {new Date().getFullYear()} Trucore Technology. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <Link

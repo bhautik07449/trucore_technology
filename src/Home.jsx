@@ -13,34 +13,34 @@ export default function Home() {
     return (
         <>
             <Helmet>
-                <title>Kenayos Technology | Software Development Company</title>
-                <meta name="description" content="Kenayos Technology offers custom software development, web apps, and digital solutions to help businesses grow efficiently." />
-                <meta name="keywords" content="software development, web development, IT services, digital solutions, Kenayos Technology" />
+                <title>Trucore Technology | Software Development Company</title>
+                <meta name="description" content="Trucore Technology offers custom software development, web apps, and digital solutions to help businesses grow efficiently." />
+                <meta name="keywords" content="software development, web development, IT services, digital solutions, Trucore Technology" />
 
-                <link rel="canonical" href="https://kenayos.com/" />
+                <link rel="canonical" href="https://Trucore.com/" />
 
-                <meta property="og:title" content="Kenayos Technology" />
+                <meta property="og:title" content="Trucore Technology" />
                 <meta property="og:description" content="Custom software and web development services for modern businesses." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://kenayos.com/" />
-                <meta property="og:image" content="https://kenayos.com/logo.png" />
+                <meta property="og:url" content="https://Trucore.com/" />
+                <meta property="og:image" content="https://Trucore.com/logo.png" />
 
                 {/* Organization Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Organization",
-                        "name": "Kenayos Technology",
-                        "url": "https://kenayos.com/",
-                        "logo": "https://kenayos.com/logo.png",
+                        "name": "Trucore Technology",
+                        "url": "https://Trucore.com/",
+                        "logo": "https://Trucore.com/logo.png",
                         "contactPoint": {
                             "@type": "ContactPoint",
                             "telephone": "+91 9574432483",
                             "contactType": "customer service"
                         },
                         "sameAs": [
-                            "https://x.com/kenayostech",
-                            "https://www.instagram.com/kenayos_tech?igsh=NjY4NTJpMDhmaW53",
+                            "https://x.com/Trucoretech",
+                            "https://www.instagram.com/Trucore_tech?igsh=NjY4NTJpMDhmaW53",
                             "https://www.linkedin.com/company/115810898/admin/dashboard/"
                         ]
                     })}
@@ -57,28 +57,28 @@ export default function Home() {
                                 "position": 1,
                                 "name": "Services",
                                 "description": "Explore our wide range of software development and digital services.",
-                                "url": "https://kenayos.com/service"
+                                "url": "https://Trucore.com/service"
                             },
                             {
                                 "@type": "SiteNavigationElement",
                                 "position": 2,
                                 "name": "Portfolio",
                                 "description": "View our successful projects and case studies.",
-                                "url": "https://kenayos.com/portfolio"
+                                "url": "https://Trucore.com/portfolio"
                             },
                             {
                                 "@type": "SiteNavigationElement",
                                 "position": 3,
                                 "name": "About Us",
-                                "description": "Learn more about Kenayos Technology and our mission.",
-                                "url": "https://kenayos.com/about"
+                                "description": "Learn more about Trucore Technology and our mission.",
+                                "url": "https://Trucore.com/about"
                             },
                             {
                                 "@type": "SiteNavigationElement",
                                 "position": 4,
                                 "name": "Contact Us",
                                 "description": "Get in touch with our experts for your next project.",
-                                "url": "https://kenayos.com/contact"
+                                "url": "https://Trucore.com/contact"
                             }
                         ]
                     })}

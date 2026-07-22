@@ -78,23 +78,23 @@ export default function PortfolioSection() {
   return (
     <>
       <Helmet>
-        <title>Kenayos Technology | Portfolio - Web, App & Software Projects</title>
+        <title>Trucore Technology | Portfolio - Web, App & Software Projects</title>
         <meta
           name="description"
-          content="Explore Kenayos Technology portfolio showcasing innovative website development, mobile app development, UI/UX design, ecommerce solutions, and custom software projects."
+          content="Explore Trucore Technology portfolio showcasing innovative website development, mobile app development, UI/UX design, ecommerce solutions, and custom software projects."
         />
         <meta
           name="keywords"
-          content="portfolio, web development, app development, software projects, kenayos work"
+          content="portfolio, web development, app development, software projects, Trucore work"
         />
-        <link rel="canonical" href="https://kenayos.com/portfolio" />
-        <meta property="og:title" content="Kenayos Technology | Portfolio" />
+        <link rel="canonical" href="https://Trucore.com/portfolio" />
+        <meta property="og:title" content="Trucore Technology | Portfolio" />
         <meta
           property="og:description"
-          content="Kenayos portfolio — web development, mobile app projects, ERP systems, and custom software built for real businesses."
+          content="Trucore portfolio — web development, mobile app projects, ERP systems, and custom software built for real businesses."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://kenayos.com/portfolio" />
+        <meta property="og:url" content="https://Trucore.com/portfolio" />
         <meta property="og:image" content={logo} />
       </Helmet>
 

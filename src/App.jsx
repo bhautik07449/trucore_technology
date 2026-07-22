@@ -89,7 +89,7 @@ const App = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@kenayos.com",
+      content: "info@Trucore.com",
       color: "bg-purple-100/10 text-purple-400",
     },
     {
@@ -146,7 +146,7 @@ const App = () => {
           <div className="flex h-screen items-center justify-center bg-white text-gray-900">
             <div className="flex flex-col items-center">
               <Loader2 className="w-12 h-12 animate-spin text-primary mb-4" />
-              <p className="font-medium text-lg animate-pulse">Loading Kenayos Technology...</p>
+              <p className="font-medium text-lg animate-pulse">Loading Trucore Technology...</p>
             </div>
           </div>
         }>
@@ -211,7 +211,7 @@ const App = () => {
                   </div>
 
                   <div className="mt-12 pt-8 border-t border-white/5 text-gray-500 text-xs relative z-10">
-                    © 2026 Kenayos Technology. All rights reserved.
+                    © 2026 Trucore Technology. All rights reserved.
                   </div>
                 </div>
 
