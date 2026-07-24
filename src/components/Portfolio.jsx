@@ -86,7 +86,8 @@ const Portfolio = ({ show = false }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
                 viewport={{ once: true }}
-                className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col"
+                onClick={() => navigate(`/portfolio/${project.id}`)}
+                className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col cursor-pointer"
               >
                 {/* Image */}
                 <div className="relative h-56 overflow-hidden">

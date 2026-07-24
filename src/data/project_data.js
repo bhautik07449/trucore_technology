@@ -10,6 +10,7 @@ import p9 from "../assets/project/yoga.webp";
 
 export const projects = [
   {
+    id: "agos-farm-management-system",
     title: "Agos Farm Management System",
     category: "Web",
     tag: "Retail",
@@ -19,6 +20,7 @@ export const projects = [
     link: "https://example.com",
   },
   {
+    id: "bandhu-care",
     title: "Bandhu Care",
     category: "Mobile",
     tag: "Healthcare",
@@ -28,6 +30,7 @@ export const projects = [
     link: "https://example.com",
   },
   {
+    id: "textile-erp-system",
     title: "Textile ERP System",
     category: "Web",
     tag: "Retail",
@@ -37,6 +40,7 @@ export const projects = [
     link: "https://example.com",
   },
   {
+    id: "job-application-platform",
     title: "Job Application Platform",
     category: "Mobile",
     tag: "Recruitment",
@@ -46,6 +50,7 @@ export const projects = [
     link: "https://example.com",
   },
   // {
+  //   id: "sourceseas",
   //   title: "sourceseas",
   //   category: "Web",
   //   tag: "Retail",
@@ -55,6 +60,7 @@ export const projects = [
   //   link: "https://example.com",
   // },
   {
+    id: "lfo-habit-tracker",
     title: "LFO Habit Tracker",
     category: "Mobile",
     tag: "Healthcare",
@@ -64,6 +70,7 @@ export const projects = [
     link: "https://example.com",
   },
   // {
+  //   id: "sourceseas-admin-panel",
   //   title: "SourceSeas Admin panel",
   //   category: "Web",
   //   tag: "Retail",
@@ -73,6 +80,7 @@ export const projects = [
   //   link: "https://example.com",
   // },
   {
+    id: "resume-mart",
     title: "Resume Mart",
     category: "Mobile",
     tag: "Recruitment",
@@ -82,6 +90,7 @@ export const projects = [
     link: "https://example.com",
   },
   {
+    id: "chapel-house-wellness-yoga-blog",
     title: "Chapel House Wellness Yoga Blog",
     category: "Web",
     tag: "Wellness",

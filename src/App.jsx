@@ -13,6 +13,7 @@ import { Phone, Mail, Clock, Send, Loader2, X, CheckCircle2 } from "lucide-react
 const About = React.lazy(() => import('./page/About'));
 const ServiceSection = React.lazy(() => import('./page/Services'));
 const PortfolioSection = React.lazy(() => import('./page/Portfolio'));
+const PortfolioDetails = React.lazy(() => import('./page/PortfolioDetails'));
 const Contact = React.lazy(() => import('./page/Contact'));
 const PrivacyPolicy = React.lazy(() => import('./page/PrivacyPolicy'));
 import { useFormik } from "formik";
@@ -155,6 +156,7 @@ const App = () => {
             <Route path="/service" element={<ServiceSection />} />
             <Route path="/service/*" element={<ServiceDetails />} />
             <Route path="/portfolio" element={<PortfolioSection />} />
+            <Route path="/portfolio/:id" element={<PortfolioDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
