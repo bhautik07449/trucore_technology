@@ -9,7 +9,7 @@ import {
   Linkedin,
   ArrowUp,
 } from "lucide-react";
-import footerLogo from "../assets/white_logo.png";
+import footerLogo from "../assets/tru-core-white-logo.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
