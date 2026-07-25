@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+﻿import { Helmet } from "react-helmet-async";
 import AboutCompany from "../components/AboutCompany";
 import ApproachClient from "../components/ApproachClient";
 import Corevalue from "../components/Corevalue";
@@ -224,7 +224,7 @@ export default function About() {
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Link
                                 to="/contact"
-                                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-primary/90 hover:shadow-primary/30 hover:shadow-xl transition-all duration-300 text-lg"
+                                className="btn-primary px-8 py-4 text-lg"
                             >
                                 <Mail className="w-5 h-5" />
                                 Get In Touch

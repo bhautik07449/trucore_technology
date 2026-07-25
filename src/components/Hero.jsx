@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import hero from '../assets/hero1.png'
 import { Link } from "react-router-dom";
@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50/40"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#e8f0ff] via-white to-[#dbeafe]/50"
     >
-      <div className="absolute top-1/4 right-0 w-80 h-80 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
-      <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-secondary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
-      <div className="absolute bottom-1/4 left-10 w-72 h-72 bg-blue-100/40 rounded-full mix-blend-multiply filter blur-3xl opacity-60"></div>
+      <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#1e68ff]/15 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
+      <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-[#0d1b3e]/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+      <div className="absolute bottom-1/4 left-10 w-72 h-72 bg-[#1e68ff]/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
 
       <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-white"></div>
 
@@ -29,9 +29,9 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-sm font-medium mb-6 mx-auto lg:mx-0"
+                className="inline-flex items-center gap-2 bg-[#1e68ff]/10 text-[#1e68ff] border border-[#1e68ff]/25 px-4 py-1.5 rounded-full text-sm font-medium mb-6 mx-auto lg:mx-0"
               >
-                <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                <span className="w-2 h-2 bg-[#1e68ff] rounded-full animate-pulse"></span>
                 Trusted IT Solutions Partner
               </motion.div>
 
@@ -39,14 +39,14 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
+                className="text-4xl md:text-5xl font-bold text-[#0d1b3e] leading-tight mb-6"
               >
                 Transforming Business with <br />
                 <span className="relative inline-block mt-2">
-                  <span className="relative z-10 text-primary">
+                  <span className="relative z-10 text-[#1e68ff]">
                     Next-Gen{" "}
                   </span>
-                  AI Solutions
+                  <span className="text-[#0d1b3e]">AI Solutions</span>
                 </span>
               </motion.h1>
 
@@ -68,7 +68,7 @@ const Hero = () => {
                 <Link
                   to="/contact"
                   onClick={() => trackEvent("Hero", "Click", "Get Started")}
-                  className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-xl font-semibold shadow-lg hover:bg-primary/90 hover:shadow-primary/30 hover:shadow-xl transition-all duration-300"
+                  className="btn-primary px-7 py-3.5 text-base"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5" />
@@ -76,7 +76,7 @@ const Hero = () => {
                 <a
                   href="#services"
                   onClick={() => trackEvent("Hero", "Click", "Our Services")}
-                  className="inline-flex items-center gap-2 bg-white  border border-gray-200 px-7 py-3.5 rounded-xl font-semibold shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300"
+                  className="btn-ghost px-7 py-3.5 text-base"
                 >
                   Our Services
                 </a>
@@ -94,7 +94,7 @@ const Hero = () => {
                   { value: "24/7", label: "Support Available" },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
-                    <div className="text-2xl font-[700]">{stat.value}</div>
+                    <div className="text-2xl font-[700] text-[#0d2a63]">{stat.value}</div>
                     <div className="text-sm text-textMuted mt-0.5">{stat.label}</div>
                   </div>
                 ))}

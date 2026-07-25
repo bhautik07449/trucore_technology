@@ -10,14 +10,16 @@ module.exports = {
     extend: {
       colors: {
         primary: "#1e68ff",
-        secondary: "#1e68ff",
-        accent: "#1d1c2d",
+        secondary: "#2563eb",
+        accent: "#0d1b3e",
+        navy: "#0f1f4b",
+        navyLight: "#1a2d5a",
         surface: "#ffffff",
-        textMain: "#111827",
+        textMain: "#0d1b3e",
         textMuted: "#4b5563",
-        textOrange: "#4f46e5",
+        textOrange: "#1e68ff",
         textcolor: "#4b5563",
-        textprimary: "#111827",
+        textprimary: "#0d1b3e",
       }
     },
     screens: {

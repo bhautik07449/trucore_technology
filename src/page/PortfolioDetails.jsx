@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+﻿import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/project_data";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -64,7 +64,7 @@ export default function PortfolioDetails() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1"
+                  className="btn-primary px-8 py-4 font-bold"
                 >
                   Visit Project
                   <ExternalLink className="w-5 h-5" />

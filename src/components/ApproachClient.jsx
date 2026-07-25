@@ -1,4 +1,4 @@
-import experience from "../assets/experience.jpg";
+﻿import experience from "../assets/experience.jpg";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 

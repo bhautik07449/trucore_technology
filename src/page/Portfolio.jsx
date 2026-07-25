@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+﻿import { Helmet } from "react-helmet-async";
 import Portfolio from "../components/Portfolio";
 import Testimonials from "../components/Testimonials";
 import logo from "../assets/named_logo.png";
@@ -152,7 +152,7 @@ export default function PortfolioSection() {
               <div className="flex flex-wrap gap-4 mt-12">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-xl font-semibold shadow-lg hover:bg-primary/90 hover:shadow-primary/30 hover:shadow-xl transition-all duration-300"
+                  className="btn-primary px-7 py-3.5 text-base"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
@@ -282,7 +282,7 @@ export default function PortfolioSection() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-primary/90 hover:shadow-primary/30 hover:shadow-xl transition-all duration-300 text-lg"
+                className="btn-primary px-8 py-4 text-lg"
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5" />

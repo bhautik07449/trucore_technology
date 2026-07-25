@@ -286,7 +286,7 @@ const App = () => {
                         whileTap={{ scale: 0.98 }}
                         disabled={formik.isSubmitting}
                         type="submit"
-                        className="w-full py-4 rounded-xl text-white font-bold bg-primary shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 disabled:opacity-70 flex items-center justify-center gap-3 transition-all mt-4"
+                        className="btn-primary w-full py-4 text-base font-bold disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none mt-4"
                       >
                         {formik.isSubmitting ? (
                           <Loader2 className="w-5 h-5 animate-spin" />

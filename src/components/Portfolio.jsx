@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+﻿import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { projects } from "../data/project_data";
 import { useNavigate } from "react-router-dom";
@@ -57,11 +57,7 @@ const Portfolio = ({ show = false }) => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2.5 rounded-xl text-sm font-semibold border transition-all duration-300 ${
-                  activeCategory === cat
-                    ? "bg-primary text-white border-primary shadow-lg shadow-primary/25"
-                    : "bg-white text-gray-600 border-gray-200 hover:border-primary/40 hover:text-primary"
-                }`}
+                className={`btn-filter ${activeCategory === cat ? "active" : ""}`}
               >
                 {cat}
               </button>
@@ -146,7 +142,7 @@ const Portfolio = ({ show = false }) => {
                 trackEvent("Portfolio", "Click", "Explore Full Portfolio");
                 navigate("/portfolio");
               }}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-lg hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1"
+              className="btn-primary inline-flex items-center gap-3 px-8 py-4 text-base font-bold"
             >
               Explore Full Portfolio
               <ArrowRight className="w-5 h-5" />

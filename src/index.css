@@ -2,40 +2,176 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Brand CSS Custom Properties ─── */
+:root {
+    --color-primary: #1e68ff;
+    --color-navy: #0d1b3e;
+    --color-navy-light: #1a2d5a;
+    --color-navy-mid: #0f1f4b;
+}
+
 html,
 body {
     max-width: 100%;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
+    color: #0d1b3e;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
+    color: #0d1b3e;
 }
 
-/* body {
-    font-family: 'Manrope', sans-serif;
+/* ─── Text Selection ─── */
+::selection {
+    background-color: #1e68ff;
+    color: #ffffff;
 }
 
-h1,
-h2 {
-    font-family: 'Space Grotesk', sans-serif;
-}
-
-code {
-    font-family: 'JetBrains Mono', monospace;
-} */
-
+/* ─── Hide Scrollbar ─── */
 ::-webkit-scrollbar {
     display: none;
 }
 
 body {
     -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-body {
-    scrollbar-width: none;
+/* ─── Scroll Progress Bar ─── */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1e68ff, #0d1b3e);
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
+
+/* ─── Smooth focus ring ─── */
+*:focus-visible {
+    outline: 2px solid #1e68ff;
+    outline-offset: 2px;
+}
+
+/* ══════════════════════════════════════
+   BUTTON SYSTEM — Logo Theme
+   Primary  : Steel blue → navy on hover
+   Secondary: Outlined navy + blue border
+   Ghost    : Transparent + blue text
+   ══════════════════════════════════════ */
+
+/* Primary button — solid steel-blue with navy hover */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #1e68ff;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 14px rgba(30, 104, 255, 0.35);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-primary:hover {
+    background-color: #0d1b3e;
+    box-shadow: 0 6px 20px rgba(13, 27, 62, 0.3);
+    transform: translateY(-1px);
+}
+.btn-primary:active {
+    transform: scale(0.97);
+}
+.btn-primary:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Secondary / Outline button — white bg, navy border, blue hover */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    color: #0d1b3e;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid #0d1b3e;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-secondary:hover {
+    background-color: #0d1b3e;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+.btn-secondary:active {
+    transform: scale(0.97);
+}
+
+/* Ghost button — transparent, blue text + border on hover */
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: #1e68ff;
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid #1e68ff;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-ghost:hover {
+    background-color: #1e68ff;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(30, 104, 255, 0.3);
+    transform: translateY(-1px);
+}
+.btn-ghost:active {
+    transform: scale(0.97);
+}
+
+/* Filter / Tag pill button */
+.btn-filter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 1.25rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid #e5e7eb;
+    background-color: #ffffff;
+    color: #4b5563;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.btn-filter:hover {
+    border-color: rgba(30, 104, 255, 0.45);
+    color: #1e68ff;
+}
+.btn-filter.active {
+    background-color: #1e68ff;
+    color: #ffffff;
+    border-color: #1e68ff;
+    box-shadow: 0 4px 12px rgba(30, 104, 255, 0.3);
 }

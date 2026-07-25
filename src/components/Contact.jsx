@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Phone, Mail, Clock, Send, Loader2, MapPin } from "lucide-react";
 import { supabase } from "../supabase";
 import toast from "react-hot-toast";
@@ -230,7 +230,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={formik.isSubmitting}
-                  className="w-full py-3.5 rounded-xl text-white font-semibold bg-primary hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 disabled:opacity-70 flex items-center justify-center gap-2 transition-all duration-300"
+                  className="btn-primary w-full py-3.5 text-base disabled:opacity-65 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {formik.isSubmitting ? (
                     <>

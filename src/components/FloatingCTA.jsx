@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Phone } from "lucide-react";
 
@@ -42,7 +42,7 @@ const FloatingCTA = () => {
                   href="#contact"
                   className="flex items-center p-3 hover:bg-gray-50 rounded-lg transition duration-300"
                 >
-                  <MessageCircle className="w-5 h-5 text-blue-600 mr-3" />
+                  <MessageCircle className="w-5 h-5 text-[#1e68ff] mr-3" />
                   <div>
                     <div className="text-gray-900 font-medium">
                       Send a Message
@@ -56,7 +56,7 @@ const FloatingCTA = () => {
                   href="tel:+1234567890"
                   className="flex items-center p-3 hover:bg-gray-50 rounded-lg transition duration-300"
                 >
-                  <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                  <Phone className="w-5 h-5 text-[#1e68ff] mr-3" />
                   <div>
                     <div className="text-gray-900 font-medium">Call Us</div>
                     <div className="text-sm text-gray-500">
@@ -72,10 +72,10 @@ const FloatingCTA = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
               onClick={toggleOpen}
-              className={`flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition duration-300 ${
+              className={`flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-300 ${
                 isOpen
-                  ? "bg-gray-900 text-white hover:bg-gray-800"
-                  : "bg-textcolor text-white"
+                  ? "bg-[#0d1b3e] text-white hover:bg-[#1a2d5a]"
+                  : "bg-[#1e68ff] text-white hover:bg-[#0d1b3e] shadow-[#1e68ff]/40"
               }`}
             >
               <motion.div

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import about from "../assets/about.png";
 
 export default function AboutCompany() {

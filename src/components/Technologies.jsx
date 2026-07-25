@@ -43,10 +43,7 @@ const Technologies = ({ className = "bg-white" }) => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 border ${activeCategory === cat
-                ? "bg-primary text-white border-primary shadow-lg"
-                : "bg-white text-gray-600 border-gray-200 hover:border-primary hover:text-primary shadow-sm"
-                }`}
+              className={`btn-filter rounded-full px-6 py-2.5 ${activeCategory === cat ? "active" : ""}`}
             >
               {cat}
             </button>

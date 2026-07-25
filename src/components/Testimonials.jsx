@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { testimonials } from "../data/Testimonials_data";
 import { Swiper, SwiperSlide } from "swiper/react";

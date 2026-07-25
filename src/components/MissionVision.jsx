@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import mission from "../../src/assets/missionVision/our-mission.svg"
 import vision from "../../src/assets/missionVision/our-vision.svg"
 import { Target, Eye, ArrowRight } from "lucide-react";

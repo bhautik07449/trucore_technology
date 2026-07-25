@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Award, Target, Clock, ShieldCheck, Zap, HeartHandshake, Globe2, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -120,7 +120,7 @@ export default function ProjectDelivery() {
                                     <h4 className="text-2xl font-bold text-white mb-2">Ready to Start?</h4>
                                     <p className="text-gray-400">Let's discuss your next breakthrough project.</p>
                                 </div>
-                                <Link to="/contact" className="px-8 py-3 bg-primary text-white rounded-xl font-bold shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                                <Link to="/contact" className="btn-primary px-8 py-3 font-bold">
                                     Book a Call
                                 </Link>
                             </div>

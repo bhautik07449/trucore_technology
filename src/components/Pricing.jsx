@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { Check, X, ArrowRight, Shield, Clock, Award, Zap } from "lucide-react";
 
 const Pricing = () => {
@@ -64,8 +64,8 @@ const Pricing = () => {
       id="pricing"
       className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden"
     >
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50 rounded-full filter blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-50 rounded-full filter blur-3xl opacity-30"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#1e68ff]/10 rounded-full filter blur-3xl opacity-40"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-[#0d1b3e]/10 rounded-full filter blur-3xl opacity-30"></div>
 
       <div className="container mx-auto px-4 relative">
         <motion.div
@@ -102,7 +102,7 @@ const Pricing = () => {
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-medium">
+                  <div className="absolute top-0 right-0 bg-[#0d1b3e] text-white px-4 py-1 rounded-bl-lg rounded-tr-xl text-sm font-semibold tracking-wide">
                     Most Popular
                   </div>
                 )}
@@ -152,14 +152,10 @@ const Pricing = () => {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full px-6 py-3 rounded-lg transition duration-300 flex items-center justify-center ${
-                      plan.popular
-                        ? "bg-blue-600 text-white hover:bg-blue-700"
-                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    }`}
+                    className={plan.popular ? "btn-primary w-full py-3" : "btn-secondary w-full py-3"}
                   >
                     Get Started
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </div>
               </div>
@@ -183,10 +179,10 @@ const Pricing = () => {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors duration-300"
+              className="inline-flex items-center text-[#1e68ff] font-semibold hover:text-[#0d1b3e] transition-colors duration-300 group"
             >
               Contact for Custom Quote
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </motion.div>

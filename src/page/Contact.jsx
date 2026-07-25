@@ -1,4 +1,4 @@
-import ContactPage from "../components/Contact";
+﻿import ContactPage from "../components/Contact";
 import logo from "../assets/named_logo.png";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -235,7 +235,7 @@ export default function Contact() {
                             </Link>
                             <Link
                                 to="/portfolio"
-                                className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-xl font-semibold shadow-lg hover:bg-primary/90 hover:shadow-primary/30 hover:shadow-xl transition-all duration-300"
+                                className="btn-primary px-7 py-3.5 text-base"
                             >
                                 View Our Portfolio
                             </Link>

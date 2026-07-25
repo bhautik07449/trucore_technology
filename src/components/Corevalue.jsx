@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { ShieldCheck, Heart, Award } from "lucide-react";
 
 export default function Corevalue() {
