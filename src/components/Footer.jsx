@@ -21,7 +21,7 @@ const Footer = () => {
     // { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
     { name: "Twitter", icon: Twitter, href: "https://x.com/Trucoretech" },
     { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/Trucore_tech?igsh=NjY4NTJpMDhmaW53" },
-    { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/115810898/admin/dashboard/" },
+    { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/135344391/admin/dashboard/" },
   ];
 
   const quickLinks = [
