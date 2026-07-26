@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import logo from "../assets/named_logo.png";
 import { ShieldCheck } from "lucide-react";
@@ -258,6 +258,6 @@ const policyHtml = `
 <h2>Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, You can contact us:</p>
 <ul>
-<li>By email: <a href="mailto:info@Trucore.com">info@Trucore.com</a></li>
+<li>By email: <a href="mailto:trucoretechnology@gmail.com">trucoretechnology@gmail.com</a></li>
 </ul>
 `;

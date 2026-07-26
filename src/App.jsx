@@ -90,13 +90,13 @@ const App = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@Trucore.com",
+      content: "trucoretechnology@gmail.com",
       color: "bg-purple-100/10 text-purple-400",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 9574432483\n +91 9510353853",
+      content: "+91 9512464749\n +91 9510353853",
       color: "bg-blue-100/10 text-blue-400",
     },
     {

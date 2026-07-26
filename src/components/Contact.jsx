@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Phone, Mail, Clock, Send, Loader2, MapPin } from "lucide-react";
 import { supabase } from "../supabase";
 import toast from "react-hot-toast";
@@ -59,7 +59,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 9574432483/ +91 9510353853",
+      content: "+91 9512464749/ +91 9510353853",
       bg: "bg-blue-50",
       iconBg: "bg-primary/10",
       iconColor: "text-primary",
@@ -67,7 +67,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@Trucore.com",
+      content: "trucoretechnology@gmail.com",
       bg: "bg-blue-50",
       iconBg: "bg-primary/10",
       iconColor: "text-primary",

@@ -1,4 +1,4 @@
-﻿import ContactPage from "../components/Contact";
+import ContactPage from "../components/Contact";
 import logo from "../assets/named_logo.png";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ const contactMethods = [
         icon: Phone,
         title: "Call Us",
         description: "Speak directly with our experts",
-        detail: "+91 9574432483\n +91 9510353853",
+        detail: "+91 9512464749\n +91 9510353853",
         color: "bg-blue-50",
         iconColor: "text-blue-600",
         iconBg: "bg-blue-100",
@@ -23,7 +23,7 @@ const contactMethods = [
         icon: Mail,
         title: "Email Us",
         description: "Send us your inquiry anytime",
-        detail: "info@Trucore.com",
+        detail: "trucoretechnology@gmail.com",
         color: "bg-purple-50",
         iconColor: "text-purple-600",
         iconBg: "bg-purple-100",
@@ -66,7 +66,7 @@ export default function Contact() {
         <>
             <Helmet>
                 <title>Trucore Technology | Contact Us</title>
-                <meta name="description" content="Get in touch with Trucore Technology. Have questions or want to learn more? Fill out the form below or reach us at info@Trucore.com." />
+                <meta name="description" content="Get in touch with Trucore Technology. Have questions or want to learn more? Fill out the form below or reach us at trucoretechnology@gmail.com." />
                 <meta name="keywords" content="contact Trucore, get in touch, inquiry form, software development inquiry" />
                 <link rel="canonical" href="https://Trucore.com/contact" />
                 <meta property="og:title" content="Trucore Technology | Contact Us" />

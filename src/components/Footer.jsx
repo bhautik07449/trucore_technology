@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -56,7 +56,14 @@ const Footer = () => {
         </>
       )
     },
-    { icon: Mail, content: "trucoretechnology@gmail.com" },
+    { 
+      icon: Mail, 
+      content: (
+        <a href="mailto:trucoretechnology@gmail.com" className="hover:text-primary transition-colors whitespace-nowrap">
+          trucoretechnology@gmail.com
+        </a>
+      ) 
+    },
     {
       icon: MapPin, content: (
         <>
@@ -151,7 +158,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {contactInfo.map((info, index) => (
                 <li key={index} className="flex items-start text-white">
-                  <info.icon className="w-5 h-5 mr-3 mt-1" />
+                  <info.icon className="w-5 h-5 mr-3 mt-1 shrink-0" />
                   <span>{info.content}</span>
                 </li>
               ))}
