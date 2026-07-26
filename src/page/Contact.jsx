@@ -194,7 +194,8 @@ export default function Contact() {
                     >
                         <iframe
                             title="Trucore Technology Location"
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8634106886343!2d72.9032628!3d21.2232467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04563b5cc7cfb%3Ab4efc89904fdbc2d!2sRaj%20Imperia!5e0!3m2!1sen!2sin!4v1777894336273!5m2!1sen!2sin"                            width="100%"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.2168809454342!2d72.90068787530629!3d21.22324668047522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04563b5cc7cfb%3A0xb4efc89904fdbc2d!2sRaj%20Imperia!5e0!3m2!1sen!2sin!4v1785084330754!5m2!1sen!2sin"
+                            width="100%"
                             height="420"
                             style={{ border: 0 }}
                             allowFullScreen=""
