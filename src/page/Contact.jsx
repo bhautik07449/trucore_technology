@@ -14,7 +14,7 @@ const contactMethods = [
         icon: Phone,
         title: "Call Us",
         description: "Speak directly with our experts",
-        detail: "+91 9512464749\n +91 9510353853",
+        detail: "+91 9510353853\n +91 9512464749\n +91 8469431768",
         color: "bg-blue-50",
         iconColor: "text-blue-600",
         iconBg: "bg-blue-100",
@@ -32,7 +32,7 @@ const contactMethods = [
         icon: MapPin,
         title: "Visit Us",
         description: "Come meet our team in person",
-        detail: "303 Dhara Arcade, Surat,\nGujarat 395001, India",
+        detail: "315 Raj Imperia, Surat, Gujarat, India",
         color: "bg-green-50",
         iconColor: "text-green-600",
         iconBg: "bg-green-100",
@@ -194,8 +194,7 @@ export default function Contact() {
                     >
                         <iframe
                             title="Trucore Technology Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8634106886343!2d72.88284837540276!3d21.23726428058431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f1300c6e52f%3A0xf88307c9c18657e2!2sDhara%20Arcade!5e0!3m2!1sen!2sin!4v1777894336273!5m2!1sen!2sin"
-                            width="100%"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8634106886343!2d72.9032628!3d21.2232467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04563b5cc7cfb%3Ab4efc89904fdbc2d!2sRaj%20Imperia!5e0!3m2!1sen!2sin!4v1777894336273!5m2!1sen!2sin"                            width="100%"
                             height="420"
                             style={{ border: 0 }}
                             allowFullScreen=""

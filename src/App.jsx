@@ -96,7 +96,7 @@ const App = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 9512464749\n +91 9510353853",
+      content: "+91 9510353853\n +91 9512464749\n +91 8469431768",
       color: "bg-blue-100/10 text-blue-400",
     },
     {

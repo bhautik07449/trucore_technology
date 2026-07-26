@@ -35,7 +35,7 @@ export default function Home() {
                         "logo": "https://Trucore.com/logo.png",
                         "contactPoint": {
                             "@type": "ContactPoint",
-                            "telephone": "+91 9512464749",
+                            "telephone": "+91 9510353853\n +91 9512464749\n +91 8469431768",
                             "contactType": "customer service"
                         },
                         "sameAs": [

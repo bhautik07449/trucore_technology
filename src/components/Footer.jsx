@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -52,7 +52,7 @@ const Footer = () => {
     {
       icon: Phone, content: (
         <>
-          +91 9512464749 <br /> +91 9510353853
+          +91 9510353853 <br /> +91 9512464749 <br /> +91 8469431768
         </>
       )
     },
