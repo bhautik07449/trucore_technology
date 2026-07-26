@@ -52,15 +52,15 @@ const Footer = () => {
     {
       icon: Phone, content: (
         <>
-          +91 9574432483 <br /> +91 9510353853
+          +91 9512464749 <br /> +91 9510353853
         </>
       )
     },
-    { icon: Mail, content: "info@Trucore.com" },
+    { icon: Mail, content: "trucoretechnology@gmail.com" },
     {
       icon: MapPin, content: (
         <>
-          303 Dhara arced, <br /> Suart, Gujarat, India
+          315 Raj Imperia, <br />Suart, Gujarat, India
         </>
       )
     },
