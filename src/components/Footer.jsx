@@ -59,8 +59,8 @@ const Footer = () => {
     { 
       icon: Mail, 
       content: (
-        <a href="mailto:trucoretechnology@gmail.com" className="hover:text-primary transition-colors whitespace-nowrap">
-          trucoretechnology@gmail.com
+        <a href="mailto:contact@trucoretechnology.com" className="hover:text-primary transition-colors whitespace-nowrap">
+          contact@trucoretechnology.com
         </a>
       ) 
     },
@@ -78,7 +78,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div>
-            <img src={footerLogo} alt="Trucore Technology" className="h-10 w-auto mb-6" />
+            <img src={footerLogo} alt="Trucore Technologies" className="h-10 w-auto mb-6" />
             <p className="text-white mb-6 leading-relaxed">
               Creating innovative digital solutions for businesses worldwide. We
               transform ideas into powerful digital experiences.
@@ -169,7 +169,7 @@ const Footer = () => {
         <div className="border-t border-blue-900 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white text-center md:text-left mb-4 md:mb-0">
-              © {new Date().getFullYear()} Trucore Technology. All rights reserved.
+              © {new Date().getFullYear()} Trucore Technologies. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <Link

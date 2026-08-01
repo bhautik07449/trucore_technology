@@ -26,12 +26,12 @@ export default function ServiceSection() {
     return (
         <>
             <Helmet>
-                <title>Trucore Technology | Services - Custom Software & Web Solutions</title>
-                <meta name="description" content="Discover the range of services offered by Trucore Technology, including web development, app development, UI/UX design, and custom software solutions." />
+                <title>Trucore Technologies | Services - Custom Software & Web Solutions</title>
+                <meta name="description" content="Discover the range of services offered by Trucore Technologies, including web development, app development, UI/UX design, and custom software solutions." />
                 <meta name="keywords" content="services, web development, app development, UI/UX design, custom software, AI automation, ERP CRM" />
                 <link rel="canonical" href="https://Trucore.com/service" />
-                <meta property="og:title" content="Trucore Technology" />
-                <meta property="og:description" content="Discover the range of services offered by Trucore Technology, including web development, app development, UI/UX design, and custom software solutions." />
+                <meta property="og:title" content="Trucore Technologies" />
+                <meta property="og:description" content="Discover the range of services offered by Trucore Technologies, including web development, app development, UI/UX design, and custom software solutions." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://Trucore.com/service" />
                 <meta property="og:image" content={logo} />

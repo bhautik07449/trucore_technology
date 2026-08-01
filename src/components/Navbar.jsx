@@ -66,7 +66,7 @@ const Navbar = () => {
           <NavLink to="/">
             <motion.img
               src={logo}
-              alt="Trucore Technology"
+              alt="Trucore Technologies"
               className="h-11 w-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -213,7 +213,7 @@ const Navbar = () => {
             >
               {/* Drawer Header */}
               <div className="flex items-center justify-between px-5 py-4 border-b-2 border-[#1e68ff]/20">
-                <img src={logo} alt="Trucore Technology" className="h-9 w-auto" />
+                <img src={logo} alt="Trucore Technologies" className="h-9 w-auto" />
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1.5 rounded-lg text-[#0d1b3e] hover:text-[#1e68ff] hover:bg-[#1e68ff]/10 transition-all"

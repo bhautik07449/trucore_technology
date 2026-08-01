@@ -65,12 +65,12 @@ export default function Contact() {
     return (
         <>
             <Helmet>
-                <title>Trucore Technology | Contact Us</title>
-                <meta name="description" content="Get in touch with Trucore Technology. Have questions or want to learn more? Fill out the form below or reach us at trucoretechnology@gmail.com." />
+                <title>Trucore Technologies | Contact Us</title>
+                <meta name="description" content="Get in touch with Trucore Technologies. Have questions or want to learn more? Fill out the form below or reach us at trucoretechnology@gmail.com." />
                 <meta name="keywords" content="contact Trucore, get in touch, inquiry form, software development inquiry" />
                 <link rel="canonical" href="https://Trucore.com/contact" />
-                <meta property="og:title" content="Trucore Technology | Contact Us" />
-                <meta property="og:description" content="Get in touch with Trucore Technology. Have questions or want to learn more? Fill out the form below!" />
+                <meta property="og:title" content="Trucore Technologies | Contact Us" />
+                <meta property="og:description" content="Get in touch with Trucore Technologies. Have questions or want to learn more? Fill out the form below!" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://Trucore.com/contact" />
                 <meta property="og:image" content={logo} />
@@ -193,7 +193,7 @@ export default function Contact() {
                         className="rounded-xl overflow-hidden border border-gray-100"
                     >
                         <iframe
-                            title="Trucore Technology Location"
+                            title="Trucore Technologies Location"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.2168809454342!2d72.90068787530629!3d21.22324668047522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04563b5cc7cfb%3A0xb4efc89904fdbc2d!2sRaj%20Imperia!5e0!3m2!1sen!2sin!4v1785084330754!5m2!1sen!2sin"
                             width="100%"
                             height="420"

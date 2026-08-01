@@ -2,7 +2,7 @@
 import { serviceData } from "../data/service_details";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-import logo from "../assets/named_logo.png";
+import logo from "../assets/tru-core-logo.png";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function ServiceDetails() {
@@ -14,14 +14,14 @@ export default function ServiceDetails() {
   return (
     <>
       <Helmet>
-        <title>Trucore Technology | {data?.title || "Services"}</title>
-        <meta name="description" content="Discover the range of services offered by Trucore Technology, including web development, app development, UI/UX design, and custom software solutions." />
+        <title>Trucore Technologies | {data?.title || "Services"}</title>
+        <meta name="description" content="Discover the range of services offered by Trucore Technologies, including web development, app development, UI/UX design, and custom software solutions." />
         <meta name="keywords" content="services, web development, app development, UI/UX design, custom software" />
 
         <link rel="canonical" href={`https://Trucore.com/service/${serviceName}`} />
 
-        <meta property="og:title" content={`Trucore Technology | ${data?.title}`} />
-        <meta property="og:description" content="Discover the range of services offered by Trucore Technology." />
+        <meta property="og:title" content={`Trucore Technologies | ${data?.title}`} />
+        <meta property="og:description" content="Discover the range of services offered by Trucore Technologies." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://Trucore.com/service/${serviceName}`} />
         <meta property="og:image" content={logo} />

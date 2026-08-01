@@ -24,7 +24,7 @@ export default function PortfolioDetails() {
   return (
     <>
       <Helmet>
-        <title>Trucore Technology | {project.title}</title>
+        <title>Trucore Technologies | {project.title}</title>
         <meta name="description" content={project.description} />
       </Helmet>
 

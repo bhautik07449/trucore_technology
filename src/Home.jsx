@@ -6,20 +6,20 @@ import Contact from './components/Contact'
 import ServicesOuttoClient from "./components/ServicesOuttoClient";
 import Testimonials from "./components/Testimonials";
 import { Helmet } from "react-helmet-async";
-import logo from "./assets/named_logo.png";
+import logo from "./assets/tru-core-logo.png";
 import ProjectDelivery from "./components/ProjectDelivery";
 
 export default function Home() {
     return (
         <>
             <Helmet>
-                <title>Trucore Technology | Software Development Company</title>
-                <meta name="description" content="Trucore Technology offers custom software development, web apps, and digital solutions to help businesses grow efficiently." />
-                <meta name="keywords" content="software development, web development, IT services, digital solutions, Trucore Technology" />
+                <title>Trucore Technologies | Software Development Company</title>
+                <meta name="description" content="Trucore Technologies offers custom software development, web apps, and digital solutions to help businesses grow efficiently." />
+                <meta name="keywords" content="software development, web development, IT services, digital solutions, Trucore Technologies" />
 
                 <link rel="canonical" href="https://Trucore.com/" />
 
-                <meta property="og:title" content="Trucore Technology" />
+                <meta property="og:title" content="Trucore Technologies" />
                 <meta property="og:description" content="Custom software and web development services for modern businesses." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://Trucore.com/" />
@@ -30,7 +30,7 @@ export default function Home() {
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Organization",
-                        "name": "Trucore Technology",
+                        "name": "Trucore Technologies",
                         "url": "https://Trucore.com/",
                         "logo": "https://Trucore.com/logo.png",
                         "contactPoint": {
@@ -70,7 +70,7 @@ export default function Home() {
                                 "@type": "SiteNavigationElement",
                                 "position": 3,
                                 "name": "About Us",
-                                "description": "Learn more about Trucore Technology and our mission.",
+                                "description": "Learn more about Trucore Technologies and our mission.",
                                 "url": "https://Trucore.com/about"
                             },
                             {
