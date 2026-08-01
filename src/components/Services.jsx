@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Globe,
   Smartphone,
@@ -53,6 +53,9 @@ const Services = () => {
                 <img
                   src={service?.icon}
                   alt={service?.title}
+                  width="96"
+                  height="96"
+                  loading="lazy"
                   className="w-24 h-24 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
                 />
                 <div>

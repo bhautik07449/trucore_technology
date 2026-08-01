@@ -1,6 +1,6 @@
 ﻿import Services from "../components/Services";
 import { Helmet } from "react-helmet-async";
-import logo from "../assets/named_logo.png";
+import logo from "../assets/tru-core-logo.png";
 import { motion } from "framer-motion";
 import { Settings, ArrowRight, CheckCircle, Globe, Smartphone, Brain, Palette, ShieldCheck, Zap, Clock, Users, Star } from "lucide-react";
 import customSoftwareui from "../assets/service_img/ui/custom_softwareui.png";

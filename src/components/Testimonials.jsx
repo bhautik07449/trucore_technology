@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { testimonials } from "../data/Testimonials_data";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -86,10 +86,10 @@ const Testimonials = () => {
             ))}
           </Swiper>
 
-          <button className="prev-btn absolute top-1/2 left-2 lg:-left-6 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100">
+          <button aria-label="Previous testimonial" className="prev-btn absolute top-1/2 left-2 lg:-left-6 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button className="next-btn absolute top-1/2 right-2 lg:-right-6 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100">
+          <button aria-label="Next testimonial" className="next-btn absolute top-1/2 right-2 lg:-right-6 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100">
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>

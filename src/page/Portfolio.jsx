@@ -1,7 +1,7 @@
 ﻿import { Helmet } from "react-helmet-async";
 import Portfolio from "../components/Portfolio";
 import Testimonials from "../components/Testimonials";
-import logo from "../assets/named_logo.png";
+import logo from "../assets/tru-core-logo.png";
 import { motion } from "framer-motion";
 import {
   Briefcase, ArrowRight, CheckCircle, Globe, Smartphone,

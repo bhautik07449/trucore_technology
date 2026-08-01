@@ -1,4 +1,4 @@
-﻿import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { services } from "../data/services_data";
 
 export default function ServicesOuttoClient() {
@@ -35,7 +35,7 @@ export default function ServicesOuttoClient() {
                                     <div
                                         className="mx-auto flex items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110"
                                     >
-                                        <img src={service.icon} alt={service.name} className="h-16 lg:h-20 w-16 lg:w-20" />
+                                        <img src={service.icon} alt={service.name} width="80" height="80" loading="lazy" className="h-16 lg:h-20 w-16 lg:w-20" />
                                     </div>
                                     <h3 className="text-md lg:text-lg md:text-xl font-semibold text-gray-900">
                                         {service.name}

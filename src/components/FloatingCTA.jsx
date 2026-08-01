@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Phone } from "lucide-react";
 
@@ -72,6 +72,7 @@ const FloatingCTA = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
               onClick={toggleOpen}
+              aria-label="Toggle contact help menu"
               className={`flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-300 ${
                 isOpen
                   ? "bg-[#0d1b3e] text-white hover:bg-[#1a2d5a]"

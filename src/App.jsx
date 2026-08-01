@@ -72,7 +72,7 @@ const App = () => {
                 <p className="font-bold text-gray-900">Message Sent!</p>
                 <p className="text-sm text-gray-500">We'll contact you shortly.</p>
               </div>
-              <button onClick={() => toast.dismiss(t.id)} className="text-gray-400 hover:text-gray-600">
+              <button onClick={() => toast.dismiss(t.id)} aria-label="Close notification" className="text-gray-400 hover:text-gray-600">
                 <X className="w-5 h-5" />
               </button>
             </motion.div>
@@ -90,7 +90,7 @@ const App = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "trucoretechnology@gmail.com",
+      content: "contact@trucoretechnology.com",
       color: "bg-purple-100/10 text-purple-400",
     },
     {
@@ -151,17 +151,19 @@ const App = () => {
             </div>
           </div>
         }>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/service" element={<ServiceSection />} />
-            <Route path="/service/*" element={<ServiceDetails />} />
-            <Route path="/portfolio" element={<PortfolioSection />} />
-            <Route path="/portfolio/:id" element={<PortfolioDetails />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+          <main id="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/service" element={<ServiceSection />} />
+              <Route path="/service/*" element={<ServiceDetails />} />
+              <Route path="/portfolio" element={<PortfolioSection />} />
+              <Route path="/portfolio/:id" element={<PortfolioDetails />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
           <Footer />
         </Suspense>
 
@@ -189,7 +191,7 @@ const App = () => {
 
                   <div className="relative z-10">
                     <div className="w-12 h-1 bg-primary mb-8 rounded-full"></div>
-                    <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-6">
+                    <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-6">
                       Ready to Build <br />
                       <span className="text-primary">Your Next Big Idea?</span>
                     </h2>
@@ -220,6 +222,7 @@ const App = () => {
                 <div className="col-span-1 md:col-span-7 p-6 lg:p-12 bg-white relative">
                   <button
                     onClick={() => setShowPopup(false)}
+                    aria-label="Close consultation modal"
                     className="absolute top-2 right-2 lg:top-6 lg:right-6 w-8 h-8 lg:w-10 lg:h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-all duration-300"
                   >
                     <X className="w-5 h-5" />

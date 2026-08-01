@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -78,7 +78,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           <div>
-            <img src={footerLogo} alt="Trucore Technologies" className="h-10 w-auto mb-6" />
+            <img src={footerLogo} alt="Trucore Technologies" width="160" height="40" loading="lazy" className="h-10 w-auto mb-6" />
             <p className="text-white mb-6 leading-relaxed">
               Creating innovative digital solutions for businesses worldwide. We
               transform ideas into powerful digital experiences.

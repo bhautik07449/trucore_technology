@@ -1,4 +1,4 @@
-﻿import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { projects } from "../data/project_data";
 import { useNavigate } from "react-router-dom";
@@ -90,6 +90,9 @@ const Portfolio = ({ show = false }) => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width="400"
+                    height="224"
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700"
                   />
                   {/* Overlay on hover */}

@@ -67,7 +67,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "trucoretechnology@gmail.com",
+      content: "contact@trucoretechnology.com",
       bg: "bg-blue-50",
       iconBg: "bg-primary/10",
       iconColor: "text-primary",

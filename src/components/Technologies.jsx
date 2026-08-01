@@ -72,6 +72,9 @@ const Technologies = ({ className = "bg-white" }) => {
                     <img
                       src={tech.icon}
                       alt={tech.name}
+                      width="40"
+                      height="40"
+                      loading="lazy"
                       className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>

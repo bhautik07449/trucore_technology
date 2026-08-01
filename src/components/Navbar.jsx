@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/tru-core-logo.png";
@@ -67,6 +67,8 @@ const Navbar = () => {
             <motion.img
               src={logo}
               alt="Trucore Technologies"
+              width="160"
+              height="44"
               className="h-11 w-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -184,6 +186,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle navigation menu"
               className="p-2 rounded-lg text-[#0d1b3e] hover:text-[#1e68ff] hover:bg-[#1e68ff]/10 transition-all duration-200"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -213,9 +216,10 @@ const Navbar = () => {
             >
               {/* Drawer Header */}
               <div className="flex items-center justify-between px-5 py-4 border-b-2 border-[#1e68ff]/20">
-                <img src={logo} alt="Trucore Technologies" className="h-9 w-auto" />
+                <img src={logo} alt="Trucore Technologies" width="140" height="36" className="h-9 w-auto" />
                 <button
                   onClick={() => setIsOpen(false)}
+                  aria-label="Close navigation menu"
                   className="p-1.5 rounded-lg text-[#0d1b3e] hover:text-[#1e68ff] hover:bg-[#1e68ff]/10 transition-all"
                 >
                   <X size={22} />

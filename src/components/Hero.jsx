@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import hero from '../assets/hero1.png'
 import { Link } from "react-router-dom";
@@ -115,7 +115,9 @@ const Hero = () => {
               <img
                 src={hero}
                 alt="Hero — AI Solutions"
-                className="relative w-full drop-shadow-xl"
+                width="600"
+                height="500"
+                className="relative w-full h-auto drop-shadow-xl"
               />
 
               <motion.div

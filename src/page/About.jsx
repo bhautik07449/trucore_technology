@@ -5,7 +5,7 @@ import Corevalue from "../components/Corevalue";
 import MissionVision from "../components/MissionVision";
 import WhyUs from "../components/whyus";
 import ProcessSteps from "../components/ProcessSteps";
-import logo from "../assets/named_logo.png";
+import logo from "../assets/tru-core-logo.png";
 import { motion } from "framer-motion";
 import {
     Users, Globe, Star, LayoutGrid, ArrowRight, CheckCircle,
