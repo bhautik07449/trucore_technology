@@ -68,12 +68,12 @@ export default function Contact() {
                 <title>Trucore Technologies | Contact Us</title>
                 <meta name="description" content="Get in touch with Trucore Technologies. Have questions or want to learn more? Fill out the form below or reach us at contact@trucoretechnology.com." />
                 <meta name="keywords" content="contact Trucore, get in touch, inquiry form, software development inquiry" />
-                <link rel="canonical" href="https://Trucore.com/contact" />
+                <link rel="canonical" href="https://www.trucoretechnology.com/contact" />
                 <meta property="og:title" content="Trucore Technologies | Contact Us" />
                 <meta property="og:description" content="Get in touch with Trucore Technologies. Have questions or want to learn more? Fill out the form below!" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://Trucore.com/contact" />
-                <meta property="og:image" content={logo} />
+                <meta property="og:url" content="https://www.trucoretechnology.com/contact" />
+                <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
             </Helmet>
 
             {/* ── HERO ── */}

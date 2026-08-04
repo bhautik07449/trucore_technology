@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import Portfolio from "../components/Portfolio";
 import Testimonials from "../components/Testimonials";
 import logo from "../assets/tru-core-logo.png";
@@ -87,15 +87,15 @@ export default function PortfolioSection() {
           name="keywords"
           content="portfolio, web development, app development, software projects, Trucore work"
         />
-        <link rel="canonical" href="https://Trucore.com/portfolio" />
+        <link rel="canonical" href="https://www.trucoretechnology.com/portfolio" />
         <meta property="og:title" content="Trucore Technologies | Portfolio" />
         <meta
           property="og:description"
           content="Trucore portfolio — web development, mobile app projects, ERP systems, and custom software built for real businesses."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://Trucore.com/portfolio" />
-        <meta property="og:image" content={logo} />
+        <meta property="og:url" content="https://www.trucoretechnology.com/portfolio" />
+        <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
       </Helmet>
 
       {/* ── HERO ── */}

@@ -1,4 +1,4 @@
-﻿import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import AboutCompany from "../components/AboutCompany";
 import ApproachClient from "../components/ApproachClient";
 import Corevalue from "../components/Corevalue";
@@ -37,12 +37,12 @@ export default function About() {
                 <title>Trucore Technologies | About Us</title>
                 <meta name="description" content="Learn more about Trucore Technologies — our story, mission, vision, core values, and the team behind our innovative digital solutions." />
                 <meta name="keywords" content="about Trucore, company info, mission, vision, core values, software team" />
-                <link rel="canonical" href="https://Trucore.com/about" />
+                <link rel="canonical" href="https://www.trucoretechnology.com/about" />
                 <meta property="og:title" content="Trucore Technologies | About Us" />
                 <meta property="og:description" content="Learn more about Trucore Technologies, our mission, vision, and core values." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://Trucore.com/about" />
-                <meta property="og:image" content={logo} />
+                <meta property="og:url" content="https://www.trucoretechnology.com/about" />
+                <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
             </Helmet>
 
             {/* ── HERO (AboutCompany) ── */}

@@ -1,4 +1,4 @@
-﻿import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { serviceData } from "../data/service_details";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -18,13 +18,13 @@ export default function ServiceDetails() {
         <meta name="description" content="Discover the range of services offered by Trucore Technologies, including web development, app development, UI/UX design, and custom software solutions." />
         <meta name="keywords" content="services, web development, app development, UI/UX design, custom software" />
 
-        <link rel="canonical" href={`https://Trucore.com/service/${serviceName}`} />
+        <link rel="canonical" href={`https://www.trucoretechnology.com/service/${serviceName}`} />
 
         <meta property="og:title" content={`Trucore Technologies | ${data?.title}`} />
         <meta property="og:description" content="Discover the range of services offered by Trucore Technologies." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://Trucore.com/service/${serviceName}`} />
-        <meta property="og:image" content={logo} />
+        <meta property="og:url" content={`https://www.trucoretechnology.com/service/${serviceName}`} />
+        <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
       </Helmet>
 
       <section className="relative min-h-screen flex items-center pt-24 pb-16 lg:pb-24 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50/30">

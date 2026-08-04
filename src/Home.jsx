@@ -17,13 +17,13 @@ export default function Home() {
                 <meta name="description" content="Trucore Technologies offers custom software development, web apps, and digital solutions to help businesses grow efficiently." />
                 <meta name="keywords" content="software development, web development, IT services, digital solutions, Trucore Technologies" />
 
-                <link rel="canonical" href="https://Trucore.com/" />
+                <link rel="canonical" href="https://www.trucoretechnology.com/" />
 
                 <meta property="og:title" content="Trucore Technologies" />
                 <meta property="og:description" content="Custom software and web development services for modern businesses." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://Trucore.com/" />
-                <meta property="og:image" content="https://Trucore.com/logo.png" />
+                <meta property="og:url" content="https://www.trucoretechnology.com/" />
+                <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
 
                 {/* Organization Schema */}
                 <script type="application/ld+json">
@@ -31,8 +31,8 @@ export default function Home() {
                         "@context": "https://schema.org",
                         "@type": "Organization",
                         "name": "Trucore Technologies",
-                        "url": "https://Trucore.com/",
-                        "logo": "https://Trucore.com/logo.png",
+                        "url": "https://www.trucoretechnology.com/",
+                        "logo": "https://www.trucoretechnology.com/logo.png",
                         "contactPoint": {
                             "@type": "ContactPoint",
                             "telephone": "+91 9510353853\n +91 9512464749\n +91 8469431768",
@@ -57,28 +57,28 @@ export default function Home() {
                                 "position": 1,
                                 "name": "Services",
                                 "description": "Explore our wide range of software development and digital services.",
-                                "url": "https://Trucore.com/service"
+                                "url": "https://www.trucoretechnology.com/service"
                             },
                             {
                                 "@type": "SiteNavigationElement",
                                 "position": 2,
                                 "name": "Portfolio",
                                 "description": "View our successful projects and case studies.",
-                                "url": "https://Trucore.com/portfolio"
+                                "url": "https://www.trucoretechnology.com/portfolio"
                             },
                             {
                                 "@type": "SiteNavigationElement",
                                 "position": 3,
                                 "name": "About Us",
                                 "description": "Learn more about Trucore Technologies and our mission.",
-                                "url": "https://Trucore.com/about"
+                                "url": "https://www.trucoretechnology.com/about"
                             },
                             {
                                 "@type": "SiteNavigationElement",
                                 "position": 4,
                                 "name": "Contact Us",
                                 "description": "Get in touch with our experts for your next project.",
-                                "url": "https://Trucore.com/contact"
+                                "url": "https://www.trucoretechnology.com/contact"
                             }
                         ]
                     })}

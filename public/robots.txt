@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://Trucore.com/sitemap.xml
+Sitemap: https://www.trucoretechnology.com/sitemap.xml
