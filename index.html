@@ -2,21 +2,105 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="shortcut icon" href="/logo.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Viewport -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- Title -->
     <title>Trucore Technologies | Software Development Company</title>
-    
-    <!-- Open Graph / SEO Meta Tags -->
-    <meta name="description" content="Trucore Technologies offers custom software development, web apps, and digital solutions to help businesses grow efficiently." />
-    <meta property="og:title" content="Trucore Technologies | Software Development Company" />
-    <meta property="og:description" content="Custom software and web development services for modern businesses." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- SEO Description -->
+    <meta
+      name="description"
+      content="Trucore Technologies offers custom software development, web apps, mobile apps, and digital solutions to help businesses grow efficiently."
+    />
+
+    <meta
+      name="keywords"
+      content="Trucore Technologies, software development company, web development, mobile app development, custom software, React development, Flutter development, IT company"
+    />
+
+    <meta name="author" content="Trucore Technologies" />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://www.trucoretechnology.com/"
+    />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta
+      property="og:title"
+      content="Trucore Technologies | Software Development Company"
+    />
+
+    <meta
+      property="og:description"
+      content="Custom software, web and mobile app development services for modern businesses."
+    />
+
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.trucoretechnology.com/" />
-    <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
+
+    <meta
+      property="og:url"
+      content="https://www.trucoretechnology.com/"
+    />
+
+    <meta
+      property="og:image"
+      content="https://www.trucoretechnology.com/logo.png"
+    />
+
+    <meta
+      property="og:image:secure_url"
+      content="https://www.trucoretechnology.com/logo.png"
+    />
+
+    <meta property="og:image:type" content="image/png" />
+
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
+
+    <meta
+      property="og:image:alt"
+      content="Trucore Technologies Logo"
+    />
+
+    <meta
+      property="og:site_name"
+      content="Trucore Technologies"
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Trucore Technologies | Software Development Company"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Custom software, web and mobile app development services for modern businesses."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://www.trucoretechnology.com/logo.png"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="Trucore Technologies Logo"
+    />
 
     <!-- Organization Schema -->
     <script type="application/ld+json">
@@ -25,8 +109,15 @@
         "@type": "Organization",
         "name": "Trucore Technologies",
         "url": "https://www.trucoretechnology.com/",
-        "logo": "https://www.trucoretechnology.com/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.trucoretechnology.com/logo.png",
+          "width": 512,
+          "height": 512
+        },
         "image": "https://www.trucoretechnology.com/logo.png",
+        "description": "Trucore Technologies offers custom software development, web apps, mobile apps, and digital solutions.",
+        "telephone": "+91 9574432483",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+91 9574432483",
@@ -34,14 +125,16 @@
         },
         "sameAs": [
           "https://x.com/Trucoretech",
-          "https://www.instagram.com/Trucore_tech?igsh=NjY4NTJpMDhmaW53",
-          "https://www.linkedin.com/company/115810898/admin/dashboard/"
+          "https://www.instagram.com/Trucore_tech/",
+          "https://www.linkedin.com/company/115810898/"
         ]
       }
     </script>
   </head>
+
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
