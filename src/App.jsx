@@ -17,6 +17,7 @@ const PortfolioSection = React.lazy(() => import('./page/Portfolio'));
 const PortfolioDetails = React.lazy(() => import('./page/PortfolioDetails'));
 const Contact = React.lazy(() => import('./page/Contact'));
 const PrivacyPolicy = React.lazy(() => import('./page/PrivacyPolicy'));
+const NotFound = React.lazy(() => import('./page/NotFound'));
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import ReactGA from "react-ga4";
@@ -162,7 +163,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />

@@ -1,118 +1,108 @@
 import Services from "../components/Services";
 import { Helmet } from "react-helmet-async";
-import logo from "../assets/tru-core-logo.png";
 import { motion } from "framer-motion";
-import { Settings, ArrowRight, CheckCircle, Globe, Smartphone, Brain, Palette, ShieldCheck, Zap, Clock, Users, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, Globe, Smartphone, Brain, ShieldCheck, Zap, Clock, Users, Star, Sparkles } from "lucide-react";
 import customSoftwareui from "../assets/service_img/ui/custom_softwareui.png";
 import { Link } from "react-router-dom";
 import ProcessSteps from "../components/ProcessSteps";
 import Technologies from "../components/Technologies";
 
 const serviceHighlights = [
-    { icon: Globe, title: "website and app", desc: "Custom React & Next.js apps built for performance and scale." },
-    { icon: Brain, title: "AI & Automation", desc: "Smart automation, ML models & AI-powered workflows." },
-    { icon: ShieldCheck, title: "ERP & CRM", desc: "Tailored enterprise software for operations & growth." },
-    { icon: Zap, title: "Digital branding", desc: "Data-driven branding, SEO, and social media strategies." },
+    { title: "Web & Mobile Platforms", desc: "Custom React, Next.js & Flutter apps engineered for high concurrency." },
+    { title: "Autonomous AI Agents", desc: "Custom RAG pipelines, fine-tuned LLMs & neural workflow engines." },
+    { title: "Enterprise ERP & Cloud", desc: "Zero-trust serverless backend architecture & ERP modernization." },
+    { title: "Product UI/UX Engineering", desc: "Human-centric design systems tailored for rapid user adoption." },
 ];
 
 const trustStats = [
-    { value: "50+", label: "Projects Delivered", icon: Star },
-    { value: "98%", label: "Client Satisfaction", icon: CheckCircle },
-    { value: "24/7", label: "Support Available", icon: Clock },
-    { value: "5+", label: "Years Experience", icon: Users },
+    { value: "100+", label: "Delivered Products", icon: Star, color: "text-[#0066FF]" },
+    { value: "99.8%", label: "Client Retention", icon: CheckCircle2, color: "text-[#00B4D8]" },
+    { value: "24/7", label: "Enterprise Support", icon: Clock, color: "text-[#031B4E]" },
+    { value: "5+", label: "Years Leadership", icon: Users, color: "text-[#0066FF]" },
 ];
 
 export default function ServiceSection() {
     return (
         <>
             <Helmet>
-                <title>Trucore Technologies | Services - Custom Software & Web Solutions</title>
-                <meta name="description" content="Discover the range of services offered by Trucore Technologies, including web development, app development, UI/UX design, and custom software solutions." />
-                <meta name="keywords" content="services, web development, app development, UI/UX design, custom software, AI automation, ERP CRM" />
+                <title>Trucore Technologies | Enterprise Services & AI Solutions</title>
+                <meta name="description" content="Discover enterprise software services by Trucore Technologies: AI agents, web engineering, mobile apps, ERP systems & cloud microservices." />
                 <link rel="canonical" href="https://www.trucoretechnology.com/service" />
-                <meta property="og:title" content="Trucore Technologies" />
-                <meta property="og:description" content="Discover the range of services offered by Trucore Technologies, including web development, app development, UI/UX design, and custom software solutions." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.trucoretechnology.com/service" />
-                <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
             </Helmet>
 
             {/* ── HERO ── */}
-            <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50/30">
-                <div className="absolute top-1/4 right-0 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" />
-                <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30" />
+            <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#FAFCFF]">
+                {/* Glowing Ambient Orbs */}
+                <div className="absolute top-1/4 -right-20 w-[32rem] h-[32rem] bg-[#0066FF]/12 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+                <div className="absolute top-1/3 left-[-10%] w-[30rem] h-[30rem] bg-[#031B4E]/08 rounded-full blur-3xl opacity-40 pointer-events-none"></div>
 
-                <div className="container mx-auto px-4 pt-24 lg:pt-40 pb-20">
-                    <div className="flex flex-col lg:flex-row items-center gap-16 w-full text-left">
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center text-left">
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 25 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7 }}
-                            className="w-full lg:w-[55%]"
+                            transition={{ duration: 0.6 }}
+                            className="lg:col-span-7"
                         >
+                            <div className="badge-logo mb-4 shadow-xs">
+                                <span className="w-2 h-2 bg-[#0066FF] rounded-full animate-pulse"></span>
+                                <span className="tracking-widest uppercase text-xs font-bold font-heading">
+                                    TRUCORE CAPABILITY SUITE • ENTERPRISE ENGINEERING
+                                </span>
+                            </div>
 
-                            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                                Innovative Solutions for <br />
-                                <span className="text-primary">Modern Businesses</span>
+                            <h1 className="font-heading text-3xl sm:text-5xl lg:text-5xl font-extrabold text-[#0A1628] leading-[1.15] mb-6 tracking-tight">
+                                Engineering Next-Gen <br />
+                                <span className="text-gradient-logo font-black">Cloud, Web & AI Systems</span>
                             </h1>
 
-                            <p className="text-gray-700 text-lg lg:text-xl leading-relaxed mb-10">
-                                We provide a wide range of technology services designed to help your business scale, innovate, and lead in the digital age. From custom software to AI-driven applications, we have the expertise to bring your vision to life.
+                            <p className="text-base sm:text-lg text-textMuted leading-relaxed mb-8 max-w-2xl font-normal">
+                                At <strong className="text-[#031B4E] font-semibold">Trucore Technologies</strong>, we build mission-critical digital products that optimize enterprise workflows, accelerate market launch, and drive measurable revenue growth.
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto lg:mx-0 max-w-lg lg:max-w-none">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                                 {serviceHighlights.map((item, i) => (
-                                    <div key={i} className="flex items-start gap-3">
-                                        <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-1">
-                                            <span className="w-2 h-2 bg-primary rounded-full"></span>
+                                    <div key={i} className="flex items-start gap-3.5 bg-white p-4 rounded-2xl border border-[#0066FF]/15 shadow-xs">
+                                        <div className="w-7 h-7 bg-[#0066FF]/10 text-[#0066FF] rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                                            <span className="w-2 h-2 bg-[#0066FF] rounded-full"></span>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900">{item.title}</h4>
-                                            <p className="text-sm text-gray-500">{item.desc}</p>
+                                            <h4 className="font-heading font-bold text-[#0A1628] text-sm">{item.title}</h4>
+                                            <p className="text-xs text-textMuted mt-0.5">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="flex flex-wrap gap-4 mt-12">
+                            <div className="flex flex-wrap gap-4">
                                 <Link
                                     to="/contact"
-                                    className="btn-primary px-7 py-3.5 text-base"
+                                    className="btn-primary px-8 py-4 text-sm font-bold shadow-xl"
                                 >
-                                    Get a Free Consultation
-                                    <ArrowRight className="w-5 h-5" />
+                                    Start Project Consultation
+                                    <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
-                                    href="#services"
-                                    className="inline-flex items-center gap-2 bg-white border border-gray-200 px-7 py-3.5 rounded-xl font-semibold shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300"
+                                    href="#services-grid"
+                                    className="btn-ghost px-7 py-4 text-sm font-semibold bg-white border border-[#0066FF]/20"
                                 >
-                                    Explore Services
+                                    Explore Solutions Grid
                                 </a>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="w-full lg:w-[45%] mt-12 lg:mt-0"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="lg:col-span-5 relative"
                         >
-                            <div className="relative group">
-                                <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-                                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-60" />
-
-                                <motion.div
-                                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                    className="relative z-10"
-                                >
-                                    <div className="bg-white/50 backdrop-blur-sm rounded-[2.5rem] shadow-2xl overflow-hidden">
-                                        <img
-                                            src={customSoftwareui}
-                                            alt="Services Hero"
-                                            className="w-full rounded-[2rem] object-cover"
-                                        />
-                                    </div>
-                                </motion.div>
+                            <div className="relative rounded-3xl p-3 bg-gradient-to-br from-[#0066FF]/20 via-[#00B4D8]/10 to-transparent shadow-2xl border border-[#0066FF]/20">
+                                <img
+                                    src={customSoftwareui}
+                                    alt="Services Capability Illustration"
+                                    className="w-full h-auto object-cover rounded-2xl shadow-lg transform transition-transform duration-500 hover:scale-[1.02]"
+                                />
                             </div>
                         </motion.div>
                     </div>
@@ -120,69 +110,72 @@ export default function ServiceSection() {
             </section>
 
             {/* ── TRUST STATS STRIP ── */}
-            <section className="bg-white py-10 border-y border-gray-100">
+            <section className="bg-white py-12 border-y border-[#0066FF]/10">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {trustStats.map((s, i) => (
                             <motion.div
                                 key={i}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className="flex flex-col items-center text-center gap-2"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: i * 0.08 }}
+                                className="flex flex-col items-center text-center p-4 rounded-2xl bg-[#FAFCFF] border border-[#0066FF]/10 shadow-2xs"
                             >
-                                <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-1">
-                                    <s.icon className="w-6 h-6 text-primary" />
+                                <div className="w-10 h-10 bg-[#0066FF]/10 rounded-xl flex items-center justify-center mb-2">
+                                    <s.icon className={`w-5 h-5 ${s.color}`} />
                                 </div>
-                                <div className="text-3xl font-bold text-gray-900">{s.value}</div>
-                                <div className="text-sm text-gray-500 font-medium">{s.label}</div>
+                                <div className="font-heading text-2xl font-extrabold text-[#0A1628]">{s.value}</div>
+                                <div className="text-xs text-textMuted font-semibold font-heading uppercase tracking-wider mt-0.5">{s.label}</div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ── SERVICES GRID ── */}
-            <div>
+            {/* ── SERVICES BENTO GRID ── */}
+            <div id="services-grid">
                 <Services />
             </div>
 
-            {/* ── HOW WE WORK ── */}
+            {/* ── PROCESS PIPELINE ── */}
             <ProcessSteps />
 
-            {/* ── TECHNOLOGIES ── */}
-            <Technologies className="bg-gray-50" />
+            {/* ── TECH ECOSYSTEM ── */}
+            <Technologies className="bg-[#FAFCFF]" />
 
             {/* ── BOTTOM CTA ── */}
-            <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl -mt-32 -ml-32" />
-                <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl -mb-32 -mr-32" />
-                <div className="container mx-auto px-4 text-center relative z-10">
+            <section className="py-20 bg-gradient-to-br from-[#031B4E] via-[#0A1628] to-[#030A16] text-white relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-80 h-80 bg-[#0066FF]/15 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#00B4D8]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div className="container mx-auto px-4 text-center relative z-10 max-w-4xl">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-                            Let's Build Your Next <br />
-                            <span className="text-primary">Digital Masterpiece</span>
+                        <span className="badge-logo mb-4 border-white/20 text-white bg-white/10">Build Your Advantage</span>
+                        <h2 className="font-heading text-3xl sm:text-5xl font-black mb-6 leading-tight">
+                            Ready to Transform Your <span className="text-[#00E5FF]">Digital Architecture</span>?
                         </h2>
-                        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-                            Whether you need a new website, a mobile app, or a complete digital transformation — our team is ready to make it happen.
+                        <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto font-normal">
+                            Consult with our technical leaders and turn your product requirements into a scalable engineering blueprint.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Link
                                 to="/contact"
-                                className="btn-primary px-8 py-4 text-lg"
+                                className="btn-primary px-9 py-4 text-base font-bold shadow-2xl"
                             >
                                 Start Your Project
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
                             <Link
                                 to="/portfolio"
-                                className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
+                                className="btn-ghost px-9 py-4 text-base font-bold bg-white/10 text-white border-white/20 hover:bg-white/20"
                             >
-                                View Our Work
+                                View Case Studies
                             </Link>
                         </div>
                     </motion.div>

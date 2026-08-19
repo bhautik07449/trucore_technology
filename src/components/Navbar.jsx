@@ -156,46 +156,49 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Services Megamenu Dropdown - Centered on Container */}
+        {/* Desktop Services Megamenu Dropdown - Centered on Viewport */}
         <AnimatePresence>
           {serviceOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 12, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.98 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
+            <div
+              className="fixed top-[76px] left-1/2 -translate-x-1/2 z-[100] pointer-events-auto"
               onMouseEnter={() => setServiceOpen(true)}
               onMouseLeave={() => setServiceOpen(false)}
-              className="absolute top-full left-1/2 -translate-x-1/2 mt-1
-                         w-[950px] max-w-[95vw] bg-white shadow-2xl rounded-2xl
-                         p-8 grid grid-cols-3 gap-x-8 gap-y-6 z-[100]
-                         border border-[#0066FF]/20 border-t-4 border-t-[#0066FF]"
             >
-              {servicesMenu.map((section) => (
-                <div key={section.title}>
-                  <h4 className="font-heading font-bold text-[#031B4E] text-xs uppercase tracking-wider mb-4 border-b border-[#0066FF]/20 pb-2">
-                    {section.title}
-                  </h4>
-                  <ul className="space-y-3">
-                    {section.items.map((sub) => {
-                      const Icon = sub?.icon;
-                      return (
-                        <div key={sub?.name}>
-                          <NavLink
-                            to={sub?.link}
-                            onClick={() => setServiceOpen(false)}
-                            className="flex items-center gap-2.5 text-gray-600 text-sm cursor-pointer hover:text-[#0066FF] transition-colors duration-150 font-sans"
-                          >
-                            <Icon className="w-4 h-4 text-[#0066FF] flex-shrink-0" />
-                            {sub?.name}
-                          </NavLink>
-                        </div>
-                      );
-                    })}
-                  </ul>
-                </div>
-              ))}
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 12, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 10, scale: 0.98 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className="w-[1100px] max-w-[95vw] bg-white shadow-2xl rounded-2xl
+                           p-8 grid grid-cols-4 gap-x-8 gap-y-6
+                           border border-[#0066FF]/20 border-t-4 border-t-[#0066FF]"
+              >
+                {servicesMenu.map((section) => (
+                  <div key={section.title}>
+                    <h4 className="font-heading font-bold text-[#031B4E] text-xs uppercase tracking-wider mb-4 border-b border-[#0066FF]/20 pb-2">
+                      {section.title}
+                    </h4>
+                    <ul className="space-y-3">
+                      {section.items.map((sub) => {
+                        const Icon = sub?.icon;
+                        return (
+                          <div key={sub?.name}>
+                            <NavLink
+                              to={sub?.link}
+                              onClick={() => setServiceOpen(false)}
+                              className="flex items-center gap-2.5 text-gray-600 text-sm cursor-pointer hover:text-[#0066FF] transition-colors duration-150 font-sans"
+                            >
+                              <Icon className="w-4 h-4 text-[#0066FF] flex-shrink-0" />
+                              {sub?.name}
+                            </NavLink>
+                          </div>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           )}
         </AnimatePresence>
       </div>
