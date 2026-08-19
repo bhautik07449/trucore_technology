@@ -1,148 +1,195 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown } from "lucide-react";
-import hero from '../assets/hero1.png'
+import { ArrowRight, Sparkles, ShieldCheck, Zap, Code2, Cpu, Globe2, Layers, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { trackEvent } from "../../AnalyticsTracker";
+import heroVisual from "../assets/modern_hero_visual.jpg";
 
 const Hero = () => {
+  const marqueeItemsRow1 = [
+    "TRUCORE TECHNOLOGIES",
+    "SOFTWARE ENGINEERING",
+    "TRUCORE TECHNOLOGIES",
+    "AI & CLOUD SYSTEMS",
+  ];
+
+  const marqueeItemsRow2 = [
+    "TRUCORE TECHNOLOGIES",
+    "ENTERPRISE WEB APPS",
+    "TRUCORE TECHNOLOGIES",
+    "DIGITAL EXCELLENCE",
+  ];
+
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#e8f0ff] via-white to-[#dbeafe]/50"
+      className="relative min-h-[100dvh] lg:h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-[#FAFCFF] pt-24 pb-12"
     >
-      <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#1e68ff]/15 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse"></div>
-      <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-[#0d1b3e]/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
-      <div className="absolute bottom-1/4 left-10 w-72 h-72 bg-[#1e68ff]/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent to-white"></div>
-
-      <div className="container relative w-full px-4 pt-24 pb-20 lg:py-12">
-        <div className="flex flex-col lg:flex-row items-center gap-y-16 text-left">
-          <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="max-w-2xl"
-            >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-[#1e68ff]/10 text-[#1e68ff] border border-[#1e68ff]/25 px-4 py-1.5 rounded-full text-sm font-medium mb-6 mx-auto lg:mx-0"
-              >
-                <span className="w-2 h-2 bg-[#1e68ff] rounded-full animate-pulse"></span>
-                Trusted IT Solutions Partner
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-4xl md:text-5xl font-bold text-[#0d1b3e] leading-tight mb-6"
-              >
-                Transforming Business with <br />
-                <span className="relative inline-block mt-2">
-                  <span className="relative z-10 text-[#1e68ff]">
-                    Next-Gen{" "}
-                  </span>
-                  <span className="text-[#0d1b3e]">AI Solutions</span>
-                </span>
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-xl text-textMuted mb-10 leading-relaxed"
-              >
-                We turn your ideas into reality with innovative Web App and AI solutions. As a leading tech company, we focus on creating smart, high-quality digital experiences.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="flex flex-wrap gap-4 justify-center lg:justify-start"
-              >
-                <Link
-                  to="/contact"
-                  onClick={() => trackEvent("Hero", "Click", "Get Started")}
-                  className="btn-primary px-7 py-3.5 text-base"
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <a
-                  href="#services"
-                  onClick={() => trackEvent("Hero", "Click", "Our Services")}
-                  className="btn-ghost px-7 py-3.5 text-base"
-                >
-                  Our Services
-                </a>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.65 }}
-                className="mt-12 flex flex-wrap gap-8 justify-center lg:justify-start"
-              >
-                {[
-                  { value: "50+", label: "Projects Delivered" },
-                  { value: "98%", label: "Client Satisfaction" },
-                  { value: "24/7", label: "Support Available" },
-                ].map((stat, i) => (
-                  <div key={i} className="text-center">
-                    <div className="text-2xl font-[700] text-[#0d2a63]">{stat.value}</div>
-                    <div className="text-sm text-textMuted mt-0.5">{stat.label}</div>
-                  </div>
-                ))}
-              </motion.div>
-            </motion.div>
+      {/* ── BLURRED BACKGROUND IMAGE LAYER ── */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <img
+          src={heroVisual}
+          alt="Trucore Technologies Software Background"
+          className="w-full h-full object-cover filter blur-[70px] opacity-10 scale-135"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAFCFF]/92 via-[#FAFCFF]/85 to-[#FAFCFF]"></div>
+      </div>
+      {/* ── BACKGROUND SCROLLING COMPANY NAME MARQUEE ANIMATION ── */}
+      <div className="absolute inset-0 flex flex-col justify-center gap-4 sm:gap-8 opacity-40 pointer-events-none overflow-hidden z-0 select-none">
+        
+        {/* Track 1: Scroll Left */}
+        <div className="flex overflow-hidden w-full">
+          <div className="marquee-track animate-marquee flex gap-12 shrink-0">
+            {marqueeItemsRow1.concat(marqueeItemsRow1).concat(marqueeItemsRow1).map((text, idx) => (
+              <span key={idx} className="hero-watermark-text text-stroke-navy">
+                {text} <span className="text-[#0066FF] mx-6">•</span>
+              </span>
+            ))}
           </div>
+        </div>
 
-          <div className="w-full lg:w-[45%] px-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="absolute -top-4 -left-4 w-80 h-80 bg-blue-100 rounded-full filter blur-3xl opacity-70"></div>
-              <div className="absolute -bottom-4 -right-4 w-80 h-80 bg-purple-100 rounded-full filter blur-3xl opacity-70"></div>
-
-              <img
-                src={hero}
-                alt="Hero — AI Solutions"
-                width="600"
-                height="500"
-                className="relative w-full h-auto drop-shadow-xl"
-              />
-
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute right-2 lg:-right-8 top-1/4 bg-white p-3 lg:p-4 rounded-xl shadow-xl border border-gray-100"
-              >
-                <div className="flex items-center space-x-2 cursor-pointer">
-                  <div className="w-2.5 h-2.5 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-xs lg:text-sm font-semibold text-gray-800 capitalize">custom solutions</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute left-2 lg:-left-8 bottom-1/4 bg-white p-3 lg:p-4 rounded-xl shadow-xl border border-gray-100"
-              >
-                <div className="flex items-center space-x-2 cursor-pointer">
-                  <div className="w-2.5 h-2.5 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-xs lg:text-sm font-semibold text-gray-800">24/7 Support</span>
-                </div>
-              </motion.div>
-            </motion.div>
+        {/* Track 2: Scroll Right */}
+        <div className="flex overflow-hidden w-full">
+          <div className="marquee-track animate-marquee-reverse flex gap-12 shrink-0">
+            {marqueeItemsRow2.concat(marqueeItemsRow2).concat(marqueeItemsRow2).map((text, idx) => (
+              <span key={idx} className="hero-watermark-text text-stroke-cyan">
+                {text} <span className="text-[#00B4D8] mx-6">•</span>
+              </span>
+            ))}
           </div>
+        </div>
+
+        {/* Track 3: Scroll Left */}
+        <div className="flex overflow-hidden w-full">
+          <div className="marquee-track animate-marquee-fast flex gap-12 shrink-0">
+            {marqueeItemsRow1.concat(marqueeItemsRow1).concat(marqueeItemsRow1).map((text, idx) => (
+              <span key={idx} className="hero-watermark-text text-stroke-blue">
+                {text} <span className="text-[#031B4E] mx-6">•</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      {/* Dynamic Background Glow Orbs */}
+      <div className="absolute top-1/4 -right-20 w-[32rem] h-[32rem] bg-[#0066FF]/12 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-pulse-glow pointer-events-none"></div>
+      <div className="absolute top-1/3 left-[-10%] w-[30rem] h-[30rem] bg-[#031B4E]/08 rounded-full mix-blend-multiply filter blur-3xl opacity-40 pointer-events-none"></div>
+      <div className="absolute bottom-10 right-1/4 w-[28rem] h-[28rem] bg-[#00B4D8]/15 rounded-full mix-blend-multiply filter blur-3xl opacity-50 pointer-events-none"></div>
+
+      {/* Gradient Fade Mask at Bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent via-[#FAFCFF]/80 to-[#FAFCFF] pointer-events-none z-10"></div>
+
+      {/* ── HERO CONTENT FOREGROUND ── */}
+      <div className="container relative z-20 w-full px-4 py-4 lg:py-6">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+          
+          {/* Company Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="badge-logo mb-4 shadow-sm border-[#0066FF]/30 bg-white/90 backdrop-blur-md"
+          >
+            <span className="w-2.5 h-2.5 bg-[#0066FF] rounded-full animate-pulse"></span>
+            <span className="tracking-widest uppercase text-xs font-bold font-heading">
+              TRUCORE TECHNOLOGIES • ENTERPRISE IT & AI ARCHITECTURE
+            </span>
+          </motion.div>
+
+          {/* Main Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="font-heading text-3xl sm:text-5xl lg:text-5xl font-extrabold text-[#0A1628] leading-[1.15] mb-4 tracking-tight"
+          >
+            Empowering Modern Enterprises With <br />
+            <span className="relative inline-block mt-1">
+              <span className="relative z-10 text-gradient-logo font-black">
+                Next-Gen Web, Cloud & AI Systems
+              </span>
+              <span className="absolute bottom-1 left-0 right-0 h-2.5 bg-gradient-to-r from-[#0066FF]/20 via-[#00B4D8]/30 to-transparent -z-10 rounded-sm"></span>
+            </span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-base sm:text-lg text-textMuted mb-6 max-w-2xl leading-relaxed font-normal"
+          >
+            At <strong className="text-[#031B4E] font-semibold">Trucore Technologies</strong>, we engineer high-throughput web applications, mobile platforms, and AI automation engines that drive operational speed and revenue growth.
+          </motion.p>
+
+          {/* Action CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="flex flex-wrap gap-3.5 justify-center mb-8"
+          >
+            <Link
+              to="/contact"
+              onClick={() => trackEvent("Hero", "Click", "Start Project")}
+              className="btn-primary px-7 py-3.5 text-sm font-bold shadow-xl"
+            >
+              Start Your Project
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="#services"
+              onClick={() => trackEvent("Hero", "Click", "Explore Services")}
+              className="btn-ghost px-7 py-3.5 text-sm font-semibold bg-white/90 backdrop-blur-md"
+            >
+              Explore Capabilities
+            </a>
+          </motion.div>
+
+          {/* Interactive Feature Pills */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-wrap items-center justify-center gap-2.5 mb-8"
+          >
+            {[
+              { icon: Code2, label: "Custom Software" },
+              { icon: Cpu, label: "AI & Neural Networks" },
+              { icon: Globe2, label: "Cloud Microservices" },
+              { icon: Layers, label: "Mobile Platforms" }
+            ].map((pill, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#0066FF]/15 backdrop-blur-md shadow-2xs text-xs font-bold text-[#031B4E] font-heading"
+              >
+                <pill.icon className="w-3.5 h-3.5 text-[#0066FF]" />
+                <span>{pill.label}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Stats Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="w-full max-w-3xl pt-5 border-t border-[#0066FF]/15 grid grid-cols-1 sm:grid-cols-3 gap-4 bg-white/70 backdrop-blur-md rounded-2xl p-4 shadow-xs border border-white/80"
+          >
+            {[
+              { value: "100+", label: "Delivered Products", icon: ShieldCheck, color: "text-[#0066FF]" },
+              { value: "99.8%", label: "Client Satisfaction", icon: Sparkles, color: "text-[#00B4D8]" },
+              { value: "24/7", label: "Enterprise Support", icon: Zap, color: "text-[#031B4E]" },
+            ].map((stat, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div className="flex items-center gap-1.5 mb-0.5">
+                  <stat.icon className={`w-4 h-4 ${stat.color}`} />
+                  <span className="font-heading text-2xl font-extrabold text-[#0A1628]">{stat.value}</span>
+                </div>
+                <span className="text-[11px] text-textMuted font-semibold font-heading uppercase tracking-wider">{stat.label}</span>
+              </div>
+            ))}
+          </motion.div>
 
         </div>
       </div>

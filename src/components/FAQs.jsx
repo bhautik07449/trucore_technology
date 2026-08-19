@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle, Search } from "lucide-react";
 
@@ -57,21 +57,22 @@ const FAQs = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Frequently Asked Questions
+          <span className="badge-logo mb-4">Got Questions?</span>
+          <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-[#0A1628] mb-4">
+            Frequently Asked <span className="text-gradient-logo font-black">Questions</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Find answers to common questions about our web development services.
+          <p className="text-lg text-[#334155] max-w-2xl mx-auto mb-8 font-medium">
+            Find clear answers to common questions about our AI engineering, web apps, and development workflows.
           </p>
 
           <div className="max-w-md mx-auto relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#0066FF] w-5 h-5" />
             <input
               type="text"
               placeholder="Search questions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-full border border-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition duration-200"
+              className="w-full pl-11 pr-4 py-3.5 rounded-full border border-[#0066FF]/20 bg-white text-[#0A1628] placeholder:text-gray-400 focus:ring-2 focus:ring-[#0066FF] focus:border-transparent transition duration-200 shadow-sm"
             />
           </div>
         </motion.div>
@@ -91,14 +92,14 @@ const FAQs = () => {
                   onClick={() =>
                     setActiveIndex(activeIndex === index ? null : index)
                   }
-                  className={`w-full flex items-center justify-between p-6 rounded-xl transition duration-300 ${
+                  className={`w-full flex items-center justify-between p-6 rounded-2xl transition duration-300 border ${
                     activeIndex === index
-                      ? "bg-blue-50 shadow-md"
-                      : "bg-white hover:bg-gray-50 shadow-sm hover:shadow-md"
+                      ? "bg-[#0066FF]/10 border-[#0066FF]/30 shadow-md"
+                      : "bg-white border-gray-100 hover:border-[#0066FF]/30 shadow-sm hover:shadow-md"
                   }`}
                 >
                   <div className="flex items-center text-left">
-                    <span className="text-lg font-semibold text-gray-900">
+                    <span className="font-heading text-lg font-bold text-[#0A1628]">
                       {faq.question}
                     </span>
                   </div>
@@ -109,7 +110,7 @@ const FAQs = () => {
                     <ChevronDown
                       className={`w-5 h-5 ${
                         activeIndex === index
-                          ? "text-blue-600"
+                          ? "text-[#0066FF]"
                           : "text-gray-400"
                       }`}
                     />
@@ -125,12 +126,12 @@ const FAQs = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-6 bg-white border-t border-gray-100">
-                        <p className="text-gray-600 leading-relaxed">
+                      <div className="p-6 bg-white border-t border-gray-100 rounded-b-2xl">
+                        <p className="text-[#334155] leading-relaxed font-normal">
                           {faq.answer}
                         </p>
                         <div className="mt-4 flex items-center">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-sm">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#0066FF]/10 text-[#0066FF] text-xs font-bold font-heading">
                             {faq.category}
                           </span>
                         </div>

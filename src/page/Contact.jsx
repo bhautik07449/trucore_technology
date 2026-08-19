@@ -14,7 +14,7 @@ const contactMethods = [
         icon: Phone,
         title: "Call Us",
         description: "Speak directly with our experts",
-        detail: "+91 9510353853\n +91 9512464749\n +91 8469431768",
+        detail: "+91 95377 91849",
         color: "bg-blue-50",
         iconColor: "text-blue-600",
         iconBg: "bg-blue-100",
@@ -95,26 +95,26 @@ export default function Contact() {
                                 <span className="text-primary">Conversation</span>
                             </h1>
 
-                            <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                                Have a project in mind? Looking for a tech partner? Or simply want to say hello?
-                                We'd love to hear from you. Our team is always ready to help you turn ideas into reality.
+                            <p className="text-[#334155] text-lg leading-relaxed mb-8 font-medium">
+                                Have a project in mind? Looking for an AI & software tech partner? Or simply want to discuss your roadmap?
+                                We'd love to hear from you. Our team is always ready to turn complex goals into reality.
                             </p>
 
                             {/* Why Contact Us grid */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto lg:mx-0 max-w-lg lg:max-w-none">
                                 {[
                                     { title: "Fast Response", desc: "Replies within 24 hours" },
-                                    { title: "Expert Advice", desc: "Consult with tech leads" },
+                                    { title: "Expert Advice", desc: "Consult with AI tech leads" },
                                     { title: "Global Support", desc: "Available for all timezones" },
-                                    { title: "Project Inquiry", desc: "Get a free quote today" },
+                                    { title: "Project Inquiry", desc: "Get a free technical estimate" },
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-start gap-3">
-                                        <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-1">
-                                            <span className="w-2 h-2 bg-primary rounded-full"></span>
+                                        <div className="w-6 h-6 bg-[#0066FF]/10 rounded-full flex items-center justify-center shrink-0 mt-1">
+                                            <span className="w-2 h-2 bg-[#0066FF] rounded-full"></span>
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900">{item.title}</h4>
-                                            <p className="text-sm text-gray-500">{item.desc}</p>
+                                            <h4 className="font-bold text-[#0A1628] font-heading">{item.title}</h4>
+                                            <p className="text-xs text-[#475569] font-medium">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -122,7 +122,7 @@ export default function Contact() {
 
                             {/* Social links */}
                             <div className="flex items-center gap-3 mt-12">
-                                <span className="text-sm text-gray-500 font-medium">Follow us:</span>
+                                <span className="text-sm text-[#475569] font-semibold font-heading">Follow us:</span>
                                 {socialLinks.map((s, i) => (
                                     <a
                                         key={i}
@@ -130,7 +130,7 @@ export default function Contact() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label={s.label}
-                                        className="w-9 h-9 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary/40 hover:shadow-md transition-all duration-300"
+                                        className="w-9 h-9 bg-white border border-[#0066FF]/20 rounded-xl flex items-center justify-center text-[#031B4E] hover:text-white hover:bg-[#0066FF] hover:border-transparent hover:shadow-md transition-all duration-300"
                                     >
                                         <s.icon className="w-4 h-4" />
                                     </a>
@@ -151,14 +151,14 @@ export default function Contact() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                                    className={`p-6 rounded-2xl ${method.color} border border-white/80 shadow-sm hover:shadow-md transition-all duration-300`}
+                                    className="p-6 rounded-2xl bg-white border border-[#0066FF]/15 shadow-sm hover:shadow-md transition-all duration-300"
                                 >
-                                    <div className={`w-12 h-12 ${method.iconBg} rounded-xl flex items-center justify-center mb-4`}>
-                                        <method.icon className={`w-6 h-6 ${method.iconColor}`} />
+                                    <div className="w-12 h-12 bg-[#0066FF]/10 rounded-xl flex items-center justify-center mb-4 text-[#0066FF]">
+                                        <method.icon className="w-6 h-6 text-[#0066FF]" />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 mb-1">{method.title}</h3>
-                                    <p className="text-xs text-gray-500 mb-3">{method.description}</p>
-                                    <p className="text-sm font-semibold text-gray-800 whitespace-pre-line leading-relaxed">{method.detail}</p>
+                                    <h3 className="font-heading font-bold text-[#0A1628] mb-1">{method.title}</h3>
+                                    <p className="text-xs text-[#475569] mb-3">{method.description}</p>
+                                    <p className="text-sm font-bold text-[#0A1628] whitespace-pre-line leading-relaxed">{method.detail}</p>
                                 </motion.div>
                             ))}
                         </motion.div>

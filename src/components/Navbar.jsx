@@ -55,7 +55,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white shadow-lg border-b-2 border-[#1e68ff]/25"
+          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-[#0066FF]/20"
           : "bg-transparent"
       }`}
     >
@@ -69,7 +69,9 @@ const Navbar = () => {
               alt="Trucore Technologies"
               width="160"
               height="44"
-              className="h-11 w-auto"
+              loading="eager"
+              decoding="async"
+              className="h-11 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -77,88 +79,48 @@ const Navbar = () => {
           </NavLink>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-7">
             {menuItems.map((item) =>
               item.name === "Services" ? (
                 <div
                   key="Services"
-                  className="relative"
+                  className="static"
                   onMouseEnter={() => setServiceOpen(true)}
                   onMouseLeave={() => setServiceOpen(false)}
                 >
                   <NavLink
                     to="/service"
                     className={({ isActive }) =>
-                      `relative cursor-pointer px-3 py-2 text-base font-medium transition-colors duration-200 group inline-flex items-center
-                      ${isActive ? "text-[#1e68ff] font-semibold" : "text-[#0d1b3e] hover:text-[#1e68ff]"}`
+                      `relative cursor-pointer px-3 py-2 text-base font-medium font-heading transition-colors duration-200 group inline-flex items-center
+                      ${isActive ? "text-[#0066FF] font-semibold" : "text-[#0A1628] hover:text-[#0066FF]"}`
                     }
                   >
                     {({ isActive }) => (
                       <>
                         Services
                         <span
-                          className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#1e68ff] transition-all duration-300 ${
+                          className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-gradient-to-r from-[#031B4E] to-[#00B4D8] transition-all duration-300 ${
                             isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                           }`}
                         />
                       </>
                     )}
                   </NavLink>
-
-                  <AnimatePresence>
-                    {serviceOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 15 }}
-                        transition={{ duration: 0.25, ease: "easeOut" }}
-                        className="absolute top-full left-0 -translate-x-1/3
-                                   w-[1100px] bg-white shadow-2xl rounded-b-xl
-                                   p-8 grid grid-cols-4 gap-8 z-50
-                                   border-t-2 border-[#1e68ff]"
-                      >
-                        {servicesMenu.map((section) => (
-                          <div key={section.title}>
-                            <h4 className="font-semibold text-[#0d1b3e] text-sm uppercase tracking-wider mb-4 border-b border-[#1e68ff]/20 pb-2">
-                              {section.title}
-                            </h4>
-                            <ul className="space-y-3">
-                              {section.items.map((sub) => {
-                                const Icon = sub?.icon;
-                                return (
-                                  <div key={sub?.name}>
-                                    <NavLink
-                                      to={sub?.link}
-                                      onClick={() => setServiceOpen(false)}
-                                      className="flex items-center gap-2.5 text-gray-600 text-sm cursor-pointer hover:text-[#1e68ff] transition-colors duration-150"
-                                    >
-                                      <Icon className="w-4 h-4 text-[#1e68ff] flex-shrink-0" />
-                                      {sub?.name}
-                                    </NavLink>
-                                  </div>
-                                );
-                              })}
-                            </ul>
-                          </div>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
                 </div>
               ) : (
                 <div key={item.name} className="relative group">
                   <NavLink
                     to={item.href}
                     className={({ isActive }) =>
-                      `px-3 py-2 text-base font-medium inline-block transition-colors duration-200
-                      ${isActive ? "text-[#1e68ff] font-semibold" : "text-[#0d1b3e] hover:text-[#1e68ff]"}`
+                      `px-3 py-2 text-base font-medium font-heading inline-block transition-colors duration-200
+                      ${isActive ? "text-[#0066FF] font-semibold" : "text-[#0A1628] hover:text-[#0066FF]"}`
                     }
                   >
                     {({ isActive }) => (
                       <>
                         {item.name}
                         <span
-                          className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#1e68ff] transition-all duration-300 ${
+                          className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-gradient-to-r from-[#031B4E] to-[#00B4D8] transition-all duration-300 ${
                             isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                           }`}
                         />
@@ -173,9 +135,9 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block ml-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#1e68ff] hover:bg-[#0d1b3e] text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-[#1e68ff]/30 hover:shadow-[#0d1b3e]/20 transition-all duration-300"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="btn-primary text-sm px-6 py-2.5"
               onClick={() => navigate("/contact")}
             >
               Let&apos;s Connect
@@ -193,6 +155,49 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
+        {/* Desktop Services Megamenu Dropdown - Centered on Container */}
+        <AnimatePresence>
+          {serviceOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 12, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.98 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              onMouseEnter={() => setServiceOpen(true)}
+              onMouseLeave={() => setServiceOpen(false)}
+              className="absolute top-full left-1/2 -translate-x-1/2 mt-1
+                         w-[950px] max-w-[95vw] bg-white shadow-2xl rounded-2xl
+                         p-8 grid grid-cols-3 gap-x-8 gap-y-6 z-[100]
+                         border border-[#0066FF]/20 border-t-4 border-t-[#0066FF]"
+            >
+              {servicesMenu.map((section) => (
+                <div key={section.title}>
+                  <h4 className="font-heading font-bold text-[#031B4E] text-xs uppercase tracking-wider mb-4 border-b border-[#0066FF]/20 pb-2">
+                    {section.title}
+                  </h4>
+                  <ul className="space-y-3">
+                    {section.items.map((sub) => {
+                      const Icon = sub?.icon;
+                      return (
+                        <div key={sub?.name}>
+                          <NavLink
+                            to={sub?.link}
+                            onClick={() => setServiceOpen(false)}
+                            className="flex items-center gap-2.5 text-gray-600 text-sm cursor-pointer hover:text-[#0066FF] transition-colors duration-150 font-sans"
+                          >
+                            <Icon className="w-4 h-4 text-[#0066FF] flex-shrink-0" />
+                            {sub?.name}
+                          </NavLink>
+                        </div>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Mobile Drawer */}

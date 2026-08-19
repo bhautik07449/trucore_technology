@@ -29,6 +29,31 @@ import wordpress from "../assets/technology/wordpress.png";
 
 export const techs = [
   {
+    name: "OpenAI / Claude API",
+    icon: python,
+    category: "AI & ML",
+  },
+  {
+    name: "Python AI & PyTorch",
+    icon: python,
+    category: "AI & ML",
+  },
+  {
+    name: "LangChain / RAG",
+    icon: python,
+    category: "AI & ML",
+  },
+  {
+    name: "TensorFlow & ML",
+    icon: python,
+    category: "AI & ML",
+  },
+  {
+    name: "n8n AI Workflows",
+    icon: NodeJS,
+    category: "AI & ML",
+  },
+  {
     name: "ReactJS",
     icon: react,
     category: "Web App",

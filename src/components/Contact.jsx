@@ -59,7 +59,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 9510353853\n +91 9512464749\n +91 8469431768",
+      content: "+91 95377 91849",
       bg: "bg-blue-50",
       iconBg: "bg-primary/10",
       iconColor: "text-primary",

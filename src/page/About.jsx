@@ -52,53 +52,55 @@ export default function About() {
             <TeamStats className="border-y border-gray-100" />
 
             {/* ── OUR STORY / TIMELINE ── */}
-            <section className="py-20 bg-gray-50 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-60" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-50 rounded-full blur-3xl opacity-60" />
+            <section className="py-20 bg-[#FAFCFF] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#0066FF]/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4D8]/10 rounded-full blur-3xl" />
 
                 <div className="container mx-auto px-4 relative">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                            The <span className="text-primary">Trucore Story</span>
+                        <span className="badge-logo mb-4">Milestones & Journey</span>
+                        <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-[#0A1628] mb-4">
+                            The <span className="text-gradient-logo font-black">Trucore Story</span>
                         </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-                            From a small team with big ambitions to a growing technology company trusted by businesses across industries — here's how we got here.
+                        <p className="text-textMuted max-w-2xl mx-auto text-lg leading-relaxed">
+                            From an ambitious software engineering team to a global technology company trusted by enterprise clients worldwide.
                         </p>
                     </motion.div>
 
                     <div className="relative max-w-4xl mx-auto">
                         {/* Timeline line */}
-                        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 -translate-x-1/2 hidden md:block" />
+                        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#0066FF]/20 -translate-x-1/2 hidden md:block" />
 
                         <div className="space-y-12">
                             {milestones.map((m, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, y: 30 }}
+                                    initial={{ opacity: 0, y: 25 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                                    transition={{ duration: 0.45, delay: i * 0.08 }}
                                     viewport={{ once: true }}
                                     className={`flex flex-col md:flex-row gap-8 items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
                                 >
                                     {/* Content */}
                                     <div className="w-full md:w-[45%]">
-                                        <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
-                                            <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
+                                        <div className="bg-white rounded-2xl p-6 border border-[#0066FF]/15 shadow-sm hover:shadow-xl transition-all duration-300">
+                                            <span className="inline-block px-3 py-1 bg-[#0056C6]/10 text-[#0056C6] text-xs font-bold font-heading rounded-full mb-3 uppercase tracking-wider">
                                                 {m.year}
                                             </span>
-                                            <h3 className="text-xl font-bold text-gray-900 mb-2">{m.title}</h3>
-                                            <p className="text-gray-500 text-sm leading-relaxed">{m.desc}</p>
+                                            <h3 className="font-heading text-xl font-bold text-[#0A1628] mb-2">{m.title}</h3>
+                                            <p className="text-textMuted text-sm leading-relaxed">{m.desc}</p>
                                         </div>
                                     </div>
 
                                     {/* Center dot */}
                                     <div className="hidden md:flex w-[10%] justify-center">
-                                        <div className="w-5 h-5 bg-primary rounded-full border-4 border-white shadow-lg" />
+                                        <div className="w-5 h-5 bg-[#0066FF] rounded-full border-4 border-white shadow-md" />
                                     </div>
 
                                     {/* Spacer */}
@@ -118,8 +120,8 @@ export default function About() {
 
             {/* ── WHAT DRIVES OUR TEAM ── */}
             <section className="py-20 bg-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-50 rounded-full blur-3xl opacity-50" />
+                <div className="absolute top-0 right-0 w-80 h-80 bg-[#0066FF]/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4D8]/10 rounded-full blur-3xl" />
 
                 <div className="container mx-auto px-4 relative">
                     <div className="flex flex-col lg:flex-row gap-14 items-center">
@@ -128,27 +130,30 @@ export default function About() {
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                             className="w-full lg:w-[45%]"
                         >
                             <div className="relative">
-                                <div className="absolute -top-6 -left-6 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
-                                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-70" />
-                                <div className="p-2 bg-white/60 backdrop-blur-sm rounded-3xl border border-white/80 shadow-2xl overflow-hidden relative z-10">
+                                <div className="p-2 bg-gradient-to-tr from-[#0066FF]/20 via-[#00B4D8]/10 to-transparent rounded-3xl border border-[#0066FF]/20 shadow-xl overflow-hidden relative z-10">
                                     <img
                                         src={teamImg}
-                                        alt="Trucore Technologies Team"
+                                        alt="Trucore Technologies Software Team"
+                                        width="500"
+                                        height="400"
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full rounded-2xl object-cover"
                                     />
                                 </div>
                                 {/* Floating badge */}
-                                <div className="absolute -bottom-5 -right-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:flex items-center gap-3 z-20">
-                                    <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                                        <Users className="w-5 h-5 text-primary" />
+                                <div className="absolute -bottom-5 -right-4 bg-white p-4 rounded-2xl shadow-xl border border-[#0066FF]/15 hidden md:flex items-center gap-3 z-20">
+                                    <div className="w-10 h-10 bg-[#0056C6]/10 rounded-xl flex items-center justify-center">
+                                        <Users className="w-5 h-5 text-[#0056C6]" />
                                     </div>
                                     <div>
-                                        <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Our Team</p>
-                                        <p className="text-sm font-bold text-gray-900">Passionate Builders</p>
+                                        <p className="text-xs font-bold text-textMuted uppercase tracking-wider font-heading">Our Engineers</p>
+                                        <p className="text-sm font-bold text-[#0A1628] font-heading">Passionate Builders</p>
                                     </div>
                                 </div>
                             </div>
@@ -158,16 +163,18 @@ export default function About() {
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                             className="w-full lg:w-[55%]"
                         >
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                                A Team That <br />
-                                <span className="text-primary">Builds with Purpose</span>
+                            <span className="badge-logo mb-4">Engineering Culture</span>
+                            <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-[#0A1628] mb-4 leading-tight">
+                                A Engineering Culture <br />
+                                <span className="text-gradient-logo font-black">Driven By Purpose & Excellence</span>
                             </h2>
 
-                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                Behind every project is a dedicated team of designers, developers, and strategists who are passionate about solving real problems. We thrive on collaboration, curiosity, and a shared commitment to excellence.
+                            <p className="text-textMuted text-lg leading-relaxed mb-8">
+                                Behind every line of code is a dedicated team of software architects, designers, and domain experts passionate about crafting high-performance digital products.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -176,15 +183,16 @@ export default function About() {
                                         key={i}
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.4, delay: i * 0.1 }}
-                                        className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md hover:bg-white transition-all duration-300 group"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: i * 0.08 }}
+                                        className="flex items-start gap-3 p-4 bg-[#FAFCFF] rounded-xl border border-[#0066FF]/10 hover:shadow-md hover:border-[#00B4D8]/40 transition-all duration-300 group"
                                     >
-                                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                                            <v.icon className="w-5 h-5 text-primary" />
+                                        <div className="w-10 h-10 bg-[#0056C6]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#0056C6] group-hover:text-white transition-colors">
+                                            <v.icon className="w-5 h-5 text-[#0056C6] group-hover:text-white transition-colors" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-gray-900 text-sm">{v.title}</h4>
-                                            <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{v.desc}</p>
+                                            <h3 className="font-heading font-bold text-[#0A1628] text-sm">{v.title}</h3>
+                                            <p className="text-xs text-textMuted mt-0.5 leading-relaxed">{v.desc}</p>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -204,36 +212,37 @@ export default function About() {
             <ApproachClient />
 
             {/* ── BOTTOM CTA ── */}
-            <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl -mt-32 -ml-32" />
-                <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl -mb-32 -mr-32" />
+            <section className="py-20 bg-[#031B4E] text-white relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-80 h-80 bg-[#0056C6]/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#00B4D8]/15 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+                        <h2 className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
                             Ready to Partner with <br />
-                            <span className="text-primary">Trucore Technologies?</span>
+                            <span className="text-gradient-cyan font-black">Trucore Technologies?</span>
                         </h2>
-                        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-                            Whether you have a project idea, a business challenge, or just want to say hello — our team is here and eager to help you move forward.
+                        <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                            Whether you have an upcoming project, a complex enterprise challenge, or want a technical strategy audit — our engineering team is here to guide your success.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Link
                                 to="/contact"
-                                className="btn-primary px-8 py-4 text-lg"
+                                className="btn-primary px-8 py-4 text-base font-bold"
                             >
                                 <Mail className="w-5 h-5" />
-                                Get In Touch
+                                Get In Touch Now
                             </Link>
                             <Link
                                 to="/service"
-                                className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
+                                className="btn-ghost px-8 py-4 text-base font-semibold"
                             >
-                                Explore Services
+                                Explore All Services
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
                         </div>

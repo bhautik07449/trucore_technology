@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import Home from "./Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
@@ -10,6 +9,8 @@ import React, { Suspense, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "./supabase";
 import { Phone, Mail, Clock, Send, Loader2, X, CheckCircle2 } from "lucide-react";
+
+const Home = React.lazy(() => import("./Home"));
 const About = React.lazy(() => import('./page/About'));
 const ServiceSection = React.lazy(() => import('./page/Services'));
 const PortfolioSection = React.lazy(() => import('./page/Portfolio'));
@@ -96,7 +97,7 @@ const App = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 9510353853\n +91 9512464749\n +91 8469431768",
+      content: "+91 95377 91849",
       color: "bg-blue-100/10 text-blue-400",
     },
     {

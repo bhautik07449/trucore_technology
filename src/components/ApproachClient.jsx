@@ -1,62 +1,80 @@
-﻿import experience from "../assets/experience.jpg";
+import solutionsVisual from "../assets/modern_solutions_visual.jpg";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ShieldCheck, Zap, Layers, Sparkles } from "lucide-react";
 
 const cards = [
-    { title: "End-to-End Services", desc: "We deliver complete IT solutions, from strategy and design to development and testing, ensuring smooth execution tailored to various business requirements." },
-    { title: "Client-Centric Approach", desc: "We focus on understanding client needs and delivering personalized solutions that align with their goals and drive meaningful business growth." },
-    { title: "Reliable Delivery", desc: "We are committed to delivering high-quality results while building strong relationships that support long-term collaboration and success." },
-    { title: "Future-Ready Innovation", desc: "We leverage modern technologies to craft innovative solutions that help businesses adapt, evolve, and stay competitive in a dynamic market." },
+    { title: "End-to-End Software Lifecycle", desc: "Complete digital product development from solution architecture and UI/UX design to automated deployment.", icon: Layers },
+    { title: "Client-Centric Engineering", desc: "Customized digital experiences tailored specifically to your unique workflows, security needs, and business objectives.", icon: ShieldCheck },
+    { title: "High-Performance Delivery", desc: "Agile sprints, robust unit testing, and rigorous code reviews to guarantee bug-free, enterprise-grade releases.", icon: Zap },
+    { title: "Future-Ready Innovation", desc: "Integrating cloud scalability, microservices, and AI integrations to keep your organization ahead of competition.", icon: Sparkles },
 ];
 
 export default function ApproachClient() {
     return (
-        <section className="bg-gray-50 min-h-screen flex items-center py-8 lg:py-20">
-            <div className="container mx-auto px-4">
-                <div className="lg:flex gap-12 items-center w-full">
+        <section className="bg-[#FAFCFF] py-16 lg:py-24 relative overflow-hidden">
+            {/* Background Glow */}
+            <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#0066FF]/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                    {/* Image Column Left (5 cols) */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="flex justify-center w-full lg:w-[40%] mb-10 lg:mb-0"
+                        className="lg:col-span-5 relative"
                     >
-                        <img
-                            src={experience}
-                            alt="How We Drive Client Success"
-                            className="w-full h-full object-contain rounded-3xl drop-shadow-md"
-                        />
+                        <div className="relative rounded-3xl p-3 bg-gradient-to-tr from-[#0066FF]/20 via-[#00B4D8]/10 to-transparent shadow-xl border border-[#0066FF]/15">
+                            <img
+                                src={solutionsVisual}
+                                alt="How Trucore Drives Client Success"
+                                width="500"
+                                height="400"
+                                loading="lazy"
+                                decoding="async"
+                                className="w-full h-auto object-cover rounded-2xl shadow-lg transform transition-transform duration-500 hover:scale-[1.02]"
+                            />
+                        </div>
                     </motion.div>
 
+                    {/* Content Column Right (7 cols) */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="w-full lg:w-[60%]"
+                        className="lg:col-span-7"
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Experience the Power of <br />
-                            <span className="text-primary">Custom Solutions</span>
+                        <span className="badge-logo mb-4">Why Partner With Us</span>
+                        <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-[#0A1628] mb-8 leading-tight">
+                            Experience The Power Of <br />
+                            <span className="text-gradient-logo font-black">Tailored Technology Solutions</span>
                         </h2>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {cards.map((card, i) => (
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                                    className="bg-white border border-gray-100 p-5 rounded-xl transition-all duration-300"
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.45, delay: i * 0.08 }}
+                                    className="bg-white border border-[#0066FF]/10 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:border-[#00B4D8]/40 transition-all duration-300 group"
                                 >
-                                    <div className="flex items-start gap-3 mb-4">
-                                        <CheckCircle2 className="w-5 h-5 text-primary mt-1 shrink-0" />
-                                        <h3 className="text-xl font-bold text-gray-900">{card.title}</h3>
+                                    <div className="flex items-center gap-3 mb-3">
+                                        <div className="w-10 h-10 rounded-xl bg-[#0056C6]/10 text-[#0056C6] group-hover:bg-[#0056C6] group-hover:text-white flex items-center justify-center transition-colors duration-300">
+                                            <card.icon className="w-5 h-5" />
+                                        </div>
+                                        <h3 className="font-heading text-lg font-bold text-[#0A1628] group-hover:text-[#0066FF] transition-colors">{card.title}</h3>
                                     </div>
-                                    <p className="text-textMuted text-sm leading-relaxed pl-8">{card.desc}</p>
+                                    <p className="text-textMuted text-sm leading-relaxed">{card.desc}</p>
                                 </motion.div>
                             ))}
                         </div>
                     </motion.div>
+
                 </div>
             </div>
         </section>

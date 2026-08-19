@@ -1,73 +1,74 @@
-﻿import { motion } from "framer-motion";
-import about from "../assets/about.png";
+import { motion } from "framer-motion";
+import aboutVisual from "../assets/modern_about_visual.jpg";
+import { ShieldCheck, Cpu, Globe, Rocket } from "lucide-react";
 
 export default function AboutCompany() {
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50/30">
-            <div className="absolute top-1/4 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+        <section className="relative py-16 lg:py-24 overflow-hidden bg-[#FAFCFF]">
+            {/* Background Glow */}
+            <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#0066FF]/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#00B4D8]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div className="container mx-auto px-4 relative pt-24 pb-16 lg:pt-14 lg:pb-0">
-                <div className="flex flex-col lg:flex-row gap-12 items-center w-full text-left">
+            <div className="container mx-auto px-4 relative">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center text-left">
+                    
+                    {/* Content Column Left (7 cols) */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7 }}
-                        className="w-full lg:w-[60%]"
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="lg:col-span-7"
                     >
-                        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                            Where Strategy Meets <br />
-                            <span className="text-primary mt-2">Scalable Software.</span>
-                        </h1>
+                        <span className="badge-logo mb-4">Engineering Excellence</span>
+                        <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-[#0A1628] leading-tight mb-6">
+                            Pioneering Autonomous AI & <br />
+                            <span className="text-gradient-logo font-black">Full-Stack Web/App Systems</span>
+                        </h2>
 
-                        <p className="text-gray-700 text-lg leading-relaxed mb-10">
-                            We are a team of problem solvers who turn ideas into impactful digital solutions. By understanding your vision and business challenges, we add real value through smart planning, thoughtful design, and scalable execution—helping your business grow, adapt, and succeed in a digital world.
+                        <p className="text-textMuted text-lg leading-relaxed mb-8">
+                            We are AI engineers, software architects, and technology partners dedicated to crafting high-throughput digital systems. By fusing deep machine learning models with scalable web and mobile frameworks, we engineer products that transform enterprise productivity and scale globally.
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 mx-auto lg:mx-0 max-w-lg lg:max-w-none">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
                             {[
-                                { title: "Strategy First", desc: "Built for your goals" },
-                                { title: "Agile Process", desc: "Fast & iterative delivery" },
-                                { title: "Tech Mastery", desc: "Modern stack experts" },
-                                { title: "Global Reach", desc: "Serving clients worldwide" },
+                                { title: "Autonomous AI Agents", desc: "Custom LLMs, RAG pipelines & smart bots", icon: Cpu },
+                                { title: "Full-Stack Web & Mobile", desc: "Next.js, React, Flutter & iOS/Android apps", icon: Rocket },
+                                { title: "Enterprise ERP & Cloud", desc: "Zero-trust serverless backend architecture", icon: ShieldCheck },
+                                { title: "Global AI Engineering", desc: "Delivering software to clients worldwide", icon: Globe },
                             ].map((item, i) => (
-                                <div key={i} className="flex items-start gap-3">
-                                    <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-1">
-                                        <span className="w-2 h-2 bg-primary rounded-full"></span>
+                                <div key={i} className="flex items-start gap-3.5 bg-white p-4 rounded-xl border border-[#0066FF]/10 shadow-xs">
+                                    <div className="w-9 h-9 bg-[#0056C6]/10 text-[#0056C6] rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                        <item.icon className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-gray-900">{item.title}</h4>
-                                        <p className="text-sm text-gray-500">{item.desc}</p>
+                                        <h3 className="font-heading font-bold text-[#0A1628] text-base">{item.title}</h3>
+                                        <p className="text-xs text-textMuted mt-0.5">{item.desc}</p>
                                     </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="mt-10 flex flex-wrap gap-8 justify-center lg:justify-start">
-                            {[
-                                { value: "50+", label: "Projects Delivered" },
-                                { value: "5+", label: "Years Experience" },
-                                { value: "98%", label: "Client Satisfaction" },
-                            ].map((stat, i) => (
-                                <div key={i} className="text-center">
-                                    <div className="text-2xl font-[700]">{stat.value}</div>
-                                    <div className="text-sm text-textMuted mt-0.5">{stat.label}</div>
                                 </div>
                             ))}
                         </div>
                     </motion.div>
 
+                    {/* Image Column Right (5 cols) */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                        className="flex justify-center md:justify-end w-full lg:w-[40%] mt-10 lg:mt-0"
+                        initial={{ opacity: 0, scale: 0.92 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.15 }}
+                        className="lg:col-span-5 relative"
                     >
-                        <img
-                            src={about}
-                            alt="About Trucore Technologies"
-                            className="w-full max-w-[300px] lg:max-w-full h-auto object-contain drop-shadow-md"
-                        />
+                        <div className="relative rounded-3xl p-3 bg-gradient-to-br from-[#0066FF]/20 via-[#00B4D8]/10 to-transparent shadow-xl border border-[#0066FF]/15">
+                            <img
+                                src={aboutVisual}
+                                alt="About Trucore Technologies — Corporate Software Engineering"
+                                width="550"
+                                height="450"
+                                loading="lazy"
+                                decoding="async"
+                                className="w-full h-auto object-cover rounded-2xl shadow-lg transform transition-transform duration-500 hover:scale-[1.02]"
+                            />
+                        </div>
                     </motion.div>
                 </div>
             </div>

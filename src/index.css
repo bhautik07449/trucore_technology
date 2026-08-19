@@ -2,152 +2,223 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Brand CSS Custom Properties ─── */
+/* ─── Brand CSS Custom Properties — TRUCORE Logo Theme ─── */
 :root {
-    --color-primary: #1e68ff;
-    --color-navy: #0d1b3e;
-    --color-navy-light: #1a2d5a;
-    --color-navy-mid: #0f1f4b;
+    --color-primary: #0066FF;
+    --color-navy: #031B4E;
+    --color-navy-dark: #070F1E;
+    --color-cyan: #00B4D8;
+    --color-cyan-glow: #00E5FF;
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     max-width: 100%;
     overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    color: #0d1b3e;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Poppins', sans-serif;
-    color: #0d1b3e;
-}
-
-/* ─── Text Selection ─── */
-::selection {
-    background-color: #1e68ff;
-    color: #ffffff;
-}
-
-/* ─── Hide Scrollbar ─── */
-::-webkit-scrollbar {
-    display: none;
-}
-
-body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: #0A1628;
+    background-color: #FAFCFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-/* ─── Scroll Progress Bar ─── */
+/* Heading Typography — Space Grotesk Sci-Fi / Modern Tech Font */
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Text Selection — Logo Electric Blue */
+::selection {
+    background-color: #0066FF;
+    color: #ffffff;
+}
+
+/* Hide Scrollbar while keeping functionality */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Scroll Progress Bar — Logo Gradient */
 #scroll-progress {
     position: fixed;
     top: 0;
     left: 0;
     height: 3px;
-    background: linear-gradient(90deg, #1e68ff, #0d1b3e);
+    background: linear-gradient(90deg, #031B4E 0%, #0066FF 50%, #00B4D8 100%);
     z-index: 9999;
     transition: width 0.1s linear;
 }
 
-/* ─── Smooth focus ring ─── */
+/* Smooth focus ring */
 *:focus-visible {
-    outline: 2px solid #1e68ff;
+    outline: 2px solid #0066FF;
     outline-offset: 2px;
 }
 
 /* ══════════════════════════════════════
-   BUTTON SYSTEM — Logo Theme
-   Primary  : Steel blue → navy on hover
-   Secondary: Outlined navy + blue border
-   Ghost    : Transparent + blue text
+   IMAGE & SCROLL HARDWARE OPTIMIZATION
    ══════════════════════════════════════ */
 
-/* Primary button — solid steel-blue with navy hover */
+img, svg {
+    content-visibility: auto;
+    transform: translateZ(0);
+}
+
+/* Hardware accelerated infinite marquee track */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Smooth gradient mask overlay for marquee edges */
+.marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* ══════════════════════════════════════
+   TEXT GRADIENTS — Logo Gradient Theme
+   ══════════════════════════════════════ */
+
+.text-gradient-logo {
+    background: linear-gradient(135deg, #031B4E 0%, #0056C6 50%, #00B4D8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+    background: linear-gradient(135deg, #0056C6 0%, #00B4D8 50%, #00E5FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Modern Glow Background Badges */
+.badge-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 102, 255, 0.08);
+    color: #0056C6;
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 0.4rem 1.1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* ══════════════════════════════════════
+   BUTTON SYSTEM — Logo Theme
+   ══════════════════════════════════════ */
+
+/* Primary button — Solid Logo Electric Blue Gradient with Glow */
 .btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background-color: #1e68ff;
+    background: linear-gradient(135deg, #0056C6 0%, #0066FF 50%, #00B4D8 100%);
+    background-size: 200% auto;
     color: #ffffff;
     font-weight: 600;
-    padding: 0.65rem 1.5rem;
-    border-radius: 0.75rem;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 14px rgba(30, 104, 255, 0.35);
-    transition: all 0.25s ease;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0.7rem 1.75rem;
+    border-radius: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 18px rgba(0, 102, 255, 0.35);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     text-decoration: none;
+    will-change: transform, box-shadow;
 }
+
 .btn-primary:hover {
-    background-color: #0d1b3e;
-    box-shadow: 0 6px 20px rgba(13, 27, 62, 0.3);
-    transform: translateY(-1px);
+    background-position: right center;
+    box-shadow: 0 8px 25px rgba(0, 180, 216, 0.45);
+    transform: translateY(-2px);
 }
+
 .btn-primary:active {
-    transform: scale(0.97);
+    transform: translateY(0) scale(0.98);
 }
+
 .btn-primary:disabled {
     opacity: 0.65;
     cursor: not-allowed;
     transform: none;
 }
 
-/* Secondary / Outline button — white bg, navy border, blue hover */
+/* Secondary button — Modern Glass Dark Navy outline */
 .btn-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     background-color: #ffffff;
-    color: #0d1b3e;
+    color: #031B4E;
     font-weight: 600;
-    padding: 0.65rem 1.5rem;
-    border-radius: 0.75rem;
-    border: 2px solid #0d1b3e;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0.7rem 1.75rem;
+    border-radius: 0.85rem;
+    border: 2px solid #031B4E;
     transition: all 0.25s ease;
     cursor: pointer;
     text-decoration: none;
 }
+
 .btn-secondary:hover {
-    background-color: #0d1b3e;
+    background-color: #031B4E;
     color: #ffffff;
-    transform: translateY(-1px);
-}
-.btn-secondary:active {
-    transform: scale(0.97);
+    box-shadow: 0 6px 20px rgba(3, 27, 78, 0.25);
+    transform: translateY(-2px);
 }
 
-/* Ghost button — transparent, blue text + border on hover */
+.btn-secondary:active {
+    transform: scale(0.98);
+}
+
+/* Ghost button — Transparent with Electric Blue border */
 .btn-ghost {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background-color: transparent;
-    color: #1e68ff;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #0056C6;
     font-weight: 600;
-    padding: 0.65rem 1.5rem;
-    border-radius: 0.75rem;
-    border: 2px solid #1e68ff;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0.7rem 1.75rem;
+    border-radius: 0.85rem;
+    border: 1.5px solid rgba(0, 102, 255, 0.35);
+    backdrop-filter: blur(8px);
     transition: all 0.25s ease;
     cursor: pointer;
     text-decoration: none;
 }
+
 .btn-ghost:hover {
-    background-color: #1e68ff;
+    background: linear-gradient(135deg, #031B4E 0%, #0056C6 100%);
     color: #ffffff;
-    box-shadow: 0 4px 14px rgba(30, 104, 255, 0.3);
-    transform: translateY(-1px);
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(0, 86, 198, 0.3);
+    transform: translateY(-2px);
 }
+
 .btn-ghost:active {
-    transform: scale(0.97);
+    transform: scale(0.98);
 }
 
 /* Filter / Tag pill button */
@@ -155,23 +226,61 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.45rem 1.25rem;
-    border-radius: 0.75rem;
-    border: 1.5px solid #e5e7eb;
+    padding: 0.5rem 1.35rem;
+    border-radius: 9999px;
+    border: 1.5px solid #E2E8F0;
     background-color: #ffffff;
-    color: #4b5563;
+    color: #475569;
     font-size: 0.875rem;
     font-weight: 600;
-    transition: all 0.2s ease;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.25s ease;
     cursor: pointer;
 }
+
 .btn-filter:hover {
-    border-color: rgba(30, 104, 255, 0.45);
-    color: #1e68ff;
+    border-color: #00B4D8;
+    color: #0056C6;
+    transform: translateY(-1px);
 }
+
 .btn-filter.active {
-    background-color: #1e68ff;
+    background: linear-gradient(135deg, #031B4E 0%, #0056C6 50%, #00B4D8 100%);
     color: #ffffff;
-    border-color: #1e68ff;
-    box-shadow: 0 4px 12px rgba(30, 104, 255, 0.3);
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(0, 102, 255, 0.35);
+}
+
+/* ══════════════════════════════════════
+   BACKGROUND WATERMARK MARQUEE TYPOGRAPHY
+   ══════════════════════════════════════ */
+
+.hero-watermark-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(4rem, 11vw, 11.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    user-select: none;
+    pointer-events: none;
+}
+
+.text-stroke-navy {
+    -webkit-text-stroke: 2.5px rgba(3, 27, 78, 0.28);
+    color: rgba(3, 27, 78, 0.06);
+    filter: drop-shadow(0 0 12px rgba(3, 27, 78, 0.12));
+}
+
+.text-stroke-cyan {
+    -webkit-text-stroke: 2.5px rgba(0, 180, 216, 0.38);
+    color: rgba(0, 180, 216, 0.08);
+    filter: drop-shadow(0 0 15px rgba(0, 180, 216, 0.25));
+}
+
+.text-stroke-blue {
+    -webkit-text-stroke: 2.5px rgba(0, 102, 255, 0.32);
+    color: rgba(0, 102, 255, 0.07);
+    filter: drop-shadow(0 0 15px rgba(0, 102, 255, 0.2));
 }

@@ -11,92 +11,72 @@ import p9 from "../assets/project/yoga.webp";
 export const projects = [
   {
     id: "agos-farm-management-system",
-    title: "Agos Farm Management System",
+    title: "Agos AI Farm Management ERP",
     category: "Web",
-    tag: "Retail",
+    tag: "AgriTech AI",
     image: p1,
     description:
-      "Agricultural procurement and sales management system with Admin and Super Admin modules.",
+      "AI-driven agricultural procurement, yield forecasting, and inventory sales ERP built with Next.js & Supabase.",
     link: "https://example.com",
   },
   {
     id: "bandhu-care",
-    title: "Bandhu Care",
+    title: "BandhuCare TeleHealth Platform",
     category: "Mobile",
     tag: "Healthcare",
     image: p2,
     description:
-      "Medical service app for doctor search, appointment booking, and real-time chat.",
+      "Cross-platform Flutter mobile app featuring AI doctor matching, encrypted video consultations, and real-time vital tracking.",
     link: "https://example.com",
   },
   {
     id: "textile-erp-system",
-    title: "Textile ERP System",
+    title: "Enterprise Textile ERP & Cloud Inventory",
     category: "Web",
-    tag: "Retail",
+    tag: "Retail ERP",
     image: p4,
     description:
-      "Web-based ERP system for inventory, orders, production, and billing management.",
+      "High-scale web ERP system for automated inventory management, production pipelines, and automated multi-currency billing.",
     link: "https://example.com",
   },
   {
     id: "job-application-platform",
-    title: "Job Application Platform",
+    title: "AI-Powered Talent Matching Platform",
     category: "Mobile",
-    tag: "Recruitment",
+    tag: "Recruitment AI",
     image: p3,
     description:
-      "AI-based job platform with resume matching, tracking, and recruiter portal.",
+      "AI recruitment platform utilizing semantic NLP resume parsing, candidate scoring, and automated interview scheduling.",
     link: "https://example.com",
   },
-  // {
-  //   id: "sourceseas",
-  //   title: "sourceseas",
-  //   category: "Web",
-  //   tag: "Retail",
-  //   image: p7,
-  //   description:
-  //     "Import–Export management system built with MERN stack for trade operations.",
-  //   link: "https://example.com",
-  // },
   {
     id: "lfo-habit-tracker",
-    title: "LFO Habit Tracker",
+    title: "LFO Fitness & AI Habit Tracker App",
     category: "Mobile",
-    tag: "Healthcare",
+    tag: "Health & Fitness",
     image: p5,
     description:
-      "Modern habit and task tracking app with reminders and goal management.",
+      "React Native mobile app with AI routine suggestions, habit tracking analytics, and cloud sync.",
     link: "https://example.com",
   },
-  // {
-  //   id: "sourceseas-admin-panel",
-  //   title: "SourceSeas Admin panel",
-  //   category: "Web",
-  //   tag: "Retail",
-  //   image: p8,
-  //   description:
-  //   "Responsive admin dashboard with analytics, user management, and export handling.",
-  //   link: "https://example.com",
-  // },
   {
     id: "resume-mart",
-    title: "Resume Mart",
+    title: "ResumeMart AI Builder Platform",
     category: "Mobile",
-    tag: "Recruitment",
+    tag: "AI Software",
     image: p6,
     description:
-      "AI-powered resume builder with customizable modern templates.",
+      "AI-assisted career platform generating ATS-optimized resumes, skill gap insights, and instant PDF formatting.",
     link: "https://example.com",
   },
   {
     id: "chapel-house-wellness-yoga-blog",
-    title: "Chapel House Wellness Yoga Blog",
+    title: "Chapel House Wellness Web Platform",
     category: "Web",
-    tag: "Wellness",
+    tag: "Wellness Tech",
     image: p9,
     description:
-      "Responsive yoga and wellness blog website with clean modern design.",
+      "Headless CMS web portal with subscriber streaming, interactive schedules, and optimized sub-second load times.",
     link: "https://example.com",
   }
 ];

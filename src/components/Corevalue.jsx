@@ -1,67 +1,69 @@
-﻿import { motion } from "framer-motion";
-import { ShieldCheck, Heart, Award } from "lucide-react";
+import { motion } from "framer-motion";
+import { ShieldCheck, Cpu, Award } from "lucide-react";
 
 export default function Corevalue() {
 
     const data = [
         {
-            title: "Integrity",
-            description: "We uphold honesty and transparency in everything we do, building trust with our clients through ethical practices and clear communication at every stage.",
+            title: "Technical Transparency",
+            description: "We enforce clear communication, open repository code reviews, and zero-trust security standards at every step of project delivery.",
             icon: ShieldCheck,
-            color: "text-blue-600",
-            bg: "bg-blue-50"
+            color: "text-[#0066FF]",
+            bg: "bg-[#0066FF]/10"
         },
         {
-            title: "Customer Commitment",
-            description: "We put our clients at the center, understanding their needs and delivering tailored solutions that help them achieve their goals effectively and consistently.",
-            icon: Heart,
-            color: "text-pink-600",
-            bg: "bg-pink-50"
+            title: "Autonomous Innovation",
+            description: "We continuously master cutting-edge LLM architectures, RAG frameworks, and serverless cloud systems to keep clients ahead.",
+            icon: Cpu,
+            color: "text-[#00B4D8]",
+            bg: "bg-[#00B4D8]/10"
         },
         {
-            title: "Excellence",
-            description: "We strive for excellence by delivering high-quality solutions, continuously improving our processes, and ensuring the best outcomes for our clients.",
+            title: "Engineering Excellence",
+            description: "We hold every line of code to rigorous benchmark standards—ensuring sub-second load speeds, high concurrency, and zero downtime.",
             icon: Award,
-            color: "text-amber-600",
-            bg: "bg-amber-50"
+            color: "text-[#031B4E]",
+            bg: "bg-[#031B4E]/10"
         }
-    ]
+    ];
 
     return (
-        <section className="min-h-screen flex items-center py-16 bg-gray-50 relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
             <div className="container mx-auto relative px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-16 lg:mb-24"
+                    className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Core <span className="text-primary">Values</span>
+                    <span className="badge-logo mb-4">Core Principles</span>
+                    <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-[#0A1628] mb-4">
+                        Guiding <span className="text-gradient-logo font-black">Engineering Values</span>
                     </h2>
                     <p className="max-w-2xl mx-auto text-lg text-textMuted leading-relaxed">
-                        We leverage our extensive experience and talented resource pool to deliver top-notch IT services. Our success is built on the trust we've established with our global clients.
+                        The core principles that drive our engineering team and long-term client partnerships globally.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {data.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 25 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
                             className="group"
                         >
-                            <div className="h-full bg-white p-10 rounded-3xl border-2 border-gray-200 shadow-sm hover:shadow-xl hover:border-primary/10 transition-all duration-500 relative flex flex-col items-center text-center">
-                                <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-all duration-300`}>
+                            <div className="h-full bg-[#FAFCFF] p-8 lg:p-10 rounded-3xl border border-[#0066FF]/15 shadow-sm hover:shadow-xl hover:border-[#0066FF]/40 transition-all duration-500 relative flex flex-col items-center text-center">
+                                <div className={`w-16 h-16 ${item.bg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                     <item.icon className={`w-8 h-8 ${item.color}`} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300">
+                                <h3 className="font-heading text-2xl font-bold text-[#0A1628] mb-4">
                                     {item.title}
                                 </h3>
-                                <p className="text-textMuted leading-relaxed">
+                                <p className="text-textMuted leading-relaxed text-sm">
                                     {item.description}
                                 </p>
                             </div>
@@ -70,5 +72,5 @@ export default function Corevalue() {
                 </div>
             </div>
         </section>
-    )
+    );
 }

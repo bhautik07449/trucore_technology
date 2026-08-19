@@ -1,100 +1,100 @@
-﻿import { motion } from "framer-motion";
-import mission from "../../src/assets/missionVision/our-mission.svg"
-import vision from "../../src/assets/missionVision/our-vision.svg"
-import { Target, Eye, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import missionVisual from "../assets/modern_mission_visual.jpg";
+import visionVisual from "../assets/modern_vision_visual.jpg";
+import { Target, Eye } from "lucide-react";
 
 export default function MissionVision() {
     return (
-        <section className="min-h-screen flex items-center py-20 bg-white relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(#4f46e5 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
-
+        <section className="py-20 bg-[#FAFCFF] relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
 
+                    {/* Mission Card Left */}
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="w-full lg:w-1/2 relative"
+                        className="relative"
                     >
-                        <div className="relative">
-                            <span className="absolute -top-20 -left-10 text-[150px] font-bold text-gray-50 -z-10 select-none">01</span>
+                        <div className="bg-white p-8 lg:p-10 rounded-3xl border border-[#0066FF]/15 shadow-xl h-full flex flex-col justify-between relative overflow-hidden group hover:border-[#0066FF]/40 transition-colors duration-300">
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-[#0066FF]/5 rounded-bl-[6rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
 
-                            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                <Target className="w-4 h-4" />
-                                OUR PURPOSE
+                            <div>
+                                <div className="badge-logo mb-6">
+                                    <Target className="w-4 h-4 text-[#0066FF]" />
+                                    <span>OUR MISSION</span>
+                                </div>
+
+                                <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-[#0A1628] mb-6 leading-tight">
+                                    Engineering High-Impact <br />
+                                    <span className="text-gradient-logo font-black">Digital Products</span>
+                                </h2>
+
+                                <p className="text-textMuted text-base lg:text-lg leading-relaxed mb-8">
+                                    Empower organizations globally by crafting secure, scalable software architectures. We solve complex technical bottlenecks and deliver measurable ROI through transparent Agile engineering.
+                                </p>
                             </div>
 
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-                                Our <span className="text-primary">Mission</span> to <br />
-                                Empower Businesses
-                            </h2>
-
-                            <div className="bg-white p-8 lg:p-10 rounded-[2rem] border border-gray-100 shadow-2xl relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-[5rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
-
-                                <p className="text-textMuted text-lg lg:text-xl leading-relaxed mb-8">
-                                    We believe in empowering businesses with complete digital transformation by engineering groundbreaking and scalable solutions. Our mission is to tackle every tech challenge and pave the path for fresh opportunities and positive ROIs.
-                                </p>
-
-                                <div className="flex items-center gap-4">
-                                    <img src={mission} alt="Mission" className="w-16 h-16 object-contain" />
-                                    <div className="h-0.5 flex-grow bg-gray-100"></div>
-                                </div>
+                            <div className="flex items-center gap-6 pt-4 border-t border-gray-100">
+                                <img
+                                    src={missionVisual}
+                                    alt="Trucore Mission Visual"
+                                    width="64"
+                                    height="64"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-16 h-16 rounded-2xl object-cover shadow-md border border-[#0066FF]/20 shrink-0"
+                                />
+                                <div className="h-0.5 flex-grow bg-gradient-to-r from-[#0066FF]/20 to-transparent"></div>
                             </div>
                         </div>
                     </motion.div>
 
+                    {/* Vision Card Right */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.15 }}
                         viewport={{ once: true }}
-                        className="w-full lg:w-1/2 relative lg:mt-24"
+                        className="relative"
                     >
-                        <div className="relative">
-                            <span className="absolute -top-20 -left-10 text-[150px] font-bold text-gray-50 -z-10 select-none">02</span>
+                        <div className="bg-white p-8 lg:p-10 rounded-3xl border border-[#00B4D8]/20 shadow-xl h-full flex flex-col justify-between relative overflow-hidden group hover:border-[#00B4D8]/50 transition-colors duration-300">
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-[#00B4D8]/5 rounded-bl-[6rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
 
-                            <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-600 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                                <Eye className="w-4 h-4" />
-                                OUR GOAL
+                            <div>
+                                <div className="badge-logo mb-6 border-[#00B4D8]/30 bg-[#00B4D8]/10 text-[#00B4D8]">
+                                    <Eye className="w-4 h-4 text-[#00B4D8]" />
+                                    <span>OUR VISION</span>
+                                </div>
+
+                                <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-[#0A1628] mb-6 leading-tight">
+                                    Pioneering Global <br />
+                                    <span className="text-gradient-cyan font-black">AI & Tech Innovation</span>
+                                </h2>
+
+                                <p className="text-textMuted text-base lg:text-lg leading-relaxed mb-8">
+                                    Become the premiere international technology partner recognized for advancing enterprise AI integration, cloud microservices, and sustainable software ecosystems.
+                                </p>
                             </div>
 
-                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-                                Our <span className="text-primary">Vision</span> for <br />
-                                Global Innovation
-                            </h2>
-
-                            <div className="bg-white p-8 lg:p-10 rounded-[2rem] border border-gray-100 shadow-2xl relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-[5rem] -z-10 group-hover:scale-110 transition-transform duration-500"></div>
-
-                                <p className="text-textMuted text-lg lg:text-xl leading-relaxed mb-8">
-                                    We believe in charting the path to technological innovation in every aspect. From driving business growth to pioneering cutting-edge solutions that transform industries, we catalyze the tech revolution globally.
-                                </p>
-
-                                <div className="flex items-center gap-4">
-                                    <img src={vision} alt="Vision" className="w-16 h-16 object-contain" />
-                                    <div className="h-0.5 flex-grow bg-gray-100"></div>
-                                </div>
+                            <div className="flex items-center gap-6 pt-4 border-t border-gray-100">
+                                <img
+                                    src={visionVisual}
+                                    alt="Trucore Vision Visual"
+                                    width="64"
+                                    height="64"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-16 h-16 rounded-2xl object-cover shadow-md border border-[#00B4D8]/30 shrink-0"
+                                />
+                                <div className="h-0.5 flex-grow bg-gradient-to-r from-[#00B4D8]/30 to-transparent"></div>
                             </div>
                         </div>
                     </motion.div>
+
                 </div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    className="mt-20 flex justify-center"
-                >
-                    <div className="bg-gray-900 text-white px-8 py-4 rounded-2xl flex items-center gap-4 shadow-xl">
-                        <span className="w-3 h-3 bg-primary rounded-full animate-ping"></span>
-                        <p className="font-medium">Driving the future of digital excellence</p>
-                    </div>
-                </motion.div>
             </div>
         </section>
-    )
+    );
 }

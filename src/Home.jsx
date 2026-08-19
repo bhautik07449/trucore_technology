@@ -1,98 +1,60 @@
 import Hero from "./components/Hero";
-import Portfolio from "./components/Portfolio";
+import AboutCompany from "./components/AboutCompany";
 import Services from "./components/Services";
+import ProcessSteps from "./components/ProcessSteps";
+import TeamStats from "./components/TeamStats";
+import Portfolio from "./components/Portfolio";
 import Technologies from "./components/Technologies";
-import Contact from './components/Contact'
 import ServicesOuttoClient from "./components/ServicesOuttoClient";
 import Testimonials from "./components/Testimonials";
+import BottomCTA from "./components/BottomCTA";
 import { Helmet } from "react-helmet-async";
-import logo from "./assets/tru-core-logo.png";
-import ProjectDelivery from "./components/ProjectDelivery";
 
 export default function Home() {
     return (
         <>
             <Helmet>
-                <title>Trucore Technologies | Software Development Company</title>
-                <meta name="description" content="Trucore Technologies offers custom software development, web apps, and digital solutions to help businesses grow efficiently." />
-                <meta name="keywords" content="software development, web development, IT services, digital solutions, Trucore Technologies" />
+                <title>Trucore Technologies | Autonomous AI & Full-Stack Web/App Company</title>
+                <meta name="description" content="Trucore Technologies engineers custom AI solutions, Next.js web applications, mobile apps, and enterprise ERP systems globally." />
+                <meta name="keywords" content="AI development, custom software, web app development, mobile app development, Trucore Technologies" />
 
                 <link rel="canonical" href="https://www.trucoretechnology.com/" />
 
-                <meta property="og:title" content="Trucore Technologies" />
-                <meta property="og:description" content="Custom software and web development services for modern businesses." />
+                <meta property="og:title" content="Trucore Technologies | AI & Full-Stack Engineering" />
+                <meta property="og:description" content="Custom software, autonomous AI systems, and web apps for modern enterprises." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.trucoretechnology.com/" />
-                <meta property="og:image" content="https://www.trucoretechnology.com/logo.png" />
-
-                {/* Organization Schema */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "name": "Trucore Technologies",
-                        "url": "https://www.trucoretechnology.com/",
-                        "logo": "https://www.trucoretechnology.com/logo.png",
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "telephone": "+91 9510353853\n +91 9512464749\n +91 8469431768",
-                            "contactType": "customer service"
-                        },
-                        "sameAs": [
-                            "https://x.com/Trucoretech",
-                            "https://www.instagram.com/Trucore_tech?igsh=NjY4NTJpMDhmaW53",
-                            "https://www.linkedin.com/company/115810898/admin/dashboard/"
-                        ]
-                    })}
-                </script>
-
-                {/* Site Navigation Schema for Sitelinks */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "ItemList",
-                        "itemListElement": [
-                            {
-                                "@type": "SiteNavigationElement",
-                                "position": 1,
-                                "name": "Services",
-                                "description": "Explore our wide range of software development and digital services.",
-                                "url": "https://www.trucoretechnology.com/service"
-                            },
-                            {
-                                "@type": "SiteNavigationElement",
-                                "position": 2,
-                                "name": "Portfolio",
-                                "description": "View our successful projects and case studies.",
-                                "url": "https://www.trucoretechnology.com/portfolio"
-                            },
-                            {
-                                "@type": "SiteNavigationElement",
-                                "position": 3,
-                                "name": "About Us",
-                                "description": "Learn more about Trucore Technologies and our mission.",
-                                "url": "https://www.trucoretechnology.com/about"
-                            },
-                            {
-                                "@type": "SiteNavigationElement",
-                                "position": 4,
-                                "name": "Contact Us",
-                                "description": "Get in touch with our experts for your next project.",
-                                "url": "https://www.trucoretechnology.com/contact"
-                            }
-                        ]
-                    })}
-                </script>
             </Helmet>
 
+            {/* 1. Hero Section */}
             <Hero />
+
+            {/* 2. About Company */}
+            <AboutCompany />
+
+            {/* 4. Services / Products */}
             <Services />
-            <ServicesOuttoClient />
+
+            {/* 5. Why Choose Us & Process Pipeline */}
+            <ProcessSteps />
+
+            {/* 6. Animated Counters & Statistics */}
+            <TeamStats />
+
+            {/* 7. Portfolio / Case Studies */}
             <Portfolio />
+
+            {/* 8. Modern AI & Tech Stack */}
             <Technologies />
-            <ProjectDelivery />
+
+            {/* 9. Bento Industry Grid */}
+            <ServicesOuttoClient />
+
+            {/* 10. Testimonials Carousel */}
             <Testimonials />
-            <Contact />
+
+            {/* 11. Strong Bottom CTA Section */}
+            <BottomCTA />
         </>
     )
 }
