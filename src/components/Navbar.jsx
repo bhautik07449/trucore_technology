@@ -63,15 +63,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <NavLink to="/">
+          <NavLink to="/" className="flex items-center py-1">
             <motion.img
               src={logo}
-              alt="Trucore Technologies"
-              width="160"
-              height="44"
+              alt="Trucore Technologies Logo"
               loading="eager"
               decoding="async"
-              className="h-11 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]"
+              className="h-10 sm:h-12 w-auto object-contain transition-all duration-300 hover:scale-[1.02] origin-left"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -224,7 +222,7 @@ const Navbar = () => {
             >
               {/* Drawer Header */}
               <div className="flex items-center justify-between px-5 py-4 border-b-2 border-[#1e68ff]/20">
-                <img src={logo} alt="Trucore Technologies" width="140" height="36" className="h-9 w-auto" />
+                <img src={logo} alt="Trucore Technologies Logo" className="h-9 w-auto object-contain" />
                 <button
                   onClick={() => setIsOpen(false)}
                   aria-label="Close navigation menu"

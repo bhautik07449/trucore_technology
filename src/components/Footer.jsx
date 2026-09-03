@@ -76,7 +76,15 @@ const Footer = () => {
           
           {/* Brand Info */}
           <div>
-            <img src={footerLogo} alt="Trucore Technologies" width="160" height="40" loading="lazy" decoding="async" className="h-10 w-auto mb-6 object-contain" />
+            <Link to="/" className="inline-block">
+              <img 
+                src={footerLogo} 
+                alt="Trucore Technologies Logo" 
+                loading="lazy" 
+                decoding="async" 
+                className="h-10 sm:h-12 w-auto mb-6 object-contain transition-transform duration-300 hover:scale-[1.02] origin-left" 
+              />
+            </Link>
             <p className="text-gray-300 text-sm mb-6 leading-relaxed">
               Engineering innovative digital solutions and enterprise AI systems for businesses globally.
             </p>
