@@ -1,82 +1,55 @@
-import p1 from "../assets/project/agos.webp";
-import p2 from "../assets/project/Bandhucare.webp";
-import p3 from "../assets/project/job.png";
-import p4 from "../assets/project/ktc.webp";
-import p5 from "../assets/project/LFO.webp";
-import p6 from "../assets/project/resume.webp";
-import p7 from "../assets/project/trade.webp";
-import p8 from "../assets/project/tradeadmin.webp";
-import p9 from "../assets/project/yoga.webp";
+
+import vastuThumb from "../assets/portfolio/vastu-thumb.jpg";
+import vastuDetail from "../assets/portfolio/vastu-detail.jpg";
+import gpsThumb from "../assets/portfolio/gps-thumb.jpg";
+import gpsDetail from "../assets/portfolio/gps-detail.png";
+import sourceseasThumb from "../assets/portfolio/sourceseas-thumb.jpg";
+import sourceseasDetail from "../assets/portfolio/sourceseas-detail.jpg";
+import bizmplifyThumb from "../assets/portfolio/bizmplify-thumb.jpg";
+import bizmplifyDetail from "../assets/portfolio/bizmplify-detail.jpg";
 
 export const projects = [
   {
-    id: "agos-farm-management-system",
-    title: "Agos AI Farm Management ERP",
+    id: "sourceseas-global-trade",
+    title: "SourceSeas Global Trade Platform",
     category: "Web",
-    tag: "AgriTech AI",
-    image: p1,
-    description:
-      "AI-driven agricultural procurement, yield forecasting, and inventory sales ERP built with Next.js & Supabase.",
-    link: "https://example.com",
+    tag: "B2B Trade",
+    image: sourceseasThumb,
+    detailImage: sourceseasDetail,
+    description: "A comprehensive B2B global trade platform connecting verified partners for secure transactions and business growth.",
+    longDescription: "SourceSeas (MM) is a global trade platform designed to simplify international B2B commerce.\n\nIt connects verified partners, allowing them to access exclusive deals, discover trade offers across diverse industries, and grow their global network securely.\n\nThe platform features trade diversity exploration, secure transaction frameworks, and comprehensive partner verification to build a transparent, sustainable, and inclusive global trade ecosystem.",
+    link: "https://sourceseas.com",
   },
   {
-    id: "bandhu-care",
-    title: "BandhuCare TeleHealth Platform",
-    category: "Mobile",
-    tag: "Healthcare",
-    image: p2,
-    description:
-      "Cross-platform Flutter mobile app featuring AI doctor matching, encrypted video consultations, and real-time vital tracking.",
-    link: "https://example.com",
-  },
-  {
-    id: "textile-erp-system",
-    title: "Enterprise Textile ERP & Cloud Inventory",
+    id: "bizmplify-agribusiness",
+    title: "BizMplify Agribusiness Platform",
     category: "Web",
-    tag: "Retail ERP",
-    image: p4,
-    description:
-      "High-scale web ERP system for automated inventory management, production pipelines, and automated multi-currency billing.",
-    link: "https://example.com",
+    tag: "AgriTech",
+    image: bizmplifyThumb,
+    detailImage: bizmplifyDetail,
+    description: "A smart SaaS platform designed to empower agriculture through technology and data-driven insights.",
+    longDescription: "BizMplify is a powerful SaaS platform designed to help agribusinesses manage operations, track performance, and make data-driven decisions for sustainable growth.\n\nThe platform offers comprehensive features including field trial management, production forecasting, sales performance tracking, and product portfolio management.\n\nBy transforming agribusiness with intelligence and innovation, BizMplify provides real-time data analytics, customizable dashboards, and scalable architecture for modern farming solutions.",
   },
   {
-    id: "job-application-platform",
-    title: "AI-Powered Talent Matching Platform",
-    category: "Mobile",
-    tag: "Recruitment AI",
-    image: p3,
-    description:
-      "AI recruitment platform utilizing semantic NLP resume parsing, candidate scoring, and automated interview scheduling.",
-    link: "https://example.com",
-  },
-  {
-    id: "lfo-habit-tracker",
-    title: "LFO Fitness & AI Habit Tracker App",
-    category: "Mobile",
-    tag: "Health & Fitness",
-    image: p5,
-    description:
-      "React Native mobile app with AI routine suggestions, habit tracking analytics, and cloud sync.",
-    link: "https://example.com",
-  },
-  {
-    id: "resume-mart",
-    title: "ResumeMart AI Builder Platform",
-    category: "Mobile",
-    tag: "AI Software",
-    image: p6,
-    description:
-      "AI-assisted career platform generating ATS-optimized resumes, skill gap insights, and instant PDF formatting.",
-    link: "https://example.com",
-  },
-  {
-    id: "chapel-house-wellness-yoga-blog",
-    title: "Chapel House Wellness Web Platform",
+    id: "vastu-woods-furniture",
+    title: "Vastu Woods",
     category: "Web",
-    tag: "Wellness Tech",
-    image: p9,
-    description:
-      "Headless CMS web portal with subscriber streaming, interactive schedules, and optimized sub-second load times.",
-    link: "https://example.com",
-  }
+    tag: "E-Commerce",
+    image: vastuThumb,
+    detailImage: vastuDetail,
+    description: "A visually stunning e-commerce platform for premium furniture. Built with modern web technologies to provide a seamless shopping experience.",
+    longDescription: "Vastu Woods is a premium e-commerce platform designed to showcase and sell luxury furniture.\n\nBuilt with modern web technologies, this platform offers a seamless shopping experience, featuring high-quality image galleries, responsive design across desktop and mobile devices, and intuitive navigation.\n\nThe project perfectly captures the brand's ethos of timeless elegance and functional comfort, with features like advanced product filtering, category-based browsing, and a smooth checkout process.",
+    link: "https://vastu.trucoretechnology.com",
+  },
+  {
+    id: "fleet-tracker-gps",
+    title: "Fleet Tracker GPS Command Center",
+    category: "Web",
+    tag: "Fleet Management",
+    image: gpsThumb,
+    detailImage: gpsDetail,
+    description: "Real-time GPS tracking and route history playback system for smart fleet management.",
+    longDescription: "Fleet Tracker GPS Command Center is an advanced fleet management solution designed to monitor vehicles in real-time and keep business operations moving efficiently.\n\nThe platform includes comprehensive live map tracking, allowing managers to see active and inactive vehicles. Features include detailed route history playback, geofencing for automated alerts, driver performance management, and instant notifications for speed or unauthorized stops.\n\nWith robust reporting and analytics, this system empowers logistics companies to make data-driven decisions.",
+    link: "https://gps.trucoretechnology.com",
+  },
 ];
