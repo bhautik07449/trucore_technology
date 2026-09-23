@@ -1,4 +1,4 @@
-﻿import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/project_data";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
@@ -55,8 +55,8 @@ export default function PortfolioDetails() {
                 {project.title}
               </h1>
 
-              <p className="text-gray-700 text-lg lg:text-xl leading-relaxed mb-8">
-                {project.description}
+              <p className="text-gray-700 text-lg lg:text-xl leading-relaxed mb-8 whitespace-pre-wrap">
+                {project.longDescription || project.description}
               </p>
 
               {project.link && (
@@ -81,7 +81,7 @@ export default function PortfolioDetails() {
               <div className="relative group w-full">
                 <div className="absolute inset-0 bg-primary rounded-3xl blur-3xl opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
                 <img
-                  src={project.image}
+                  src={project.detailImage || project.image}
                   alt={project.title}
                   className="relative w-full rounded-3xl drop-shadow-2xl object-cover transition-transform duration-500 group-hover:scale-[1.02] border border-gray-100"
                 />

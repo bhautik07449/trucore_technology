@@ -87,7 +87,7 @@ const Portfolio = ({ show = false }) => {
                 onClick={() => navigate(`/portfolio/${project.id}`)}
                 className="group relative bg-white rounded-2xl overflow-hidden border border-[#0066FF]/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer hover:-translate-y-1.5"
               >
-                {/* Image Container with hardware acceleration */}
+                {/* Image Container */}
                 <div className="relative h-60 overflow-hidden bg-gray-100">
                   <img
                     src={project.image}
@@ -96,7 +96,7 @@ const Portfolio = ({ show = false }) => {
                     height="240"
                     loading="lazy"
                     decoding="async"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Category badge */}
                   <div className="absolute top-4 left-4">
