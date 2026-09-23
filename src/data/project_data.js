@@ -7,8 +7,56 @@ import sourceseasThumb from "../assets/portfolio/sourceseas-thumb.jpg";
 import sourceseasDetail from "../assets/portfolio/sourceseas-detail.jpg";
 import bizmplifyThumb from "../assets/portfolio/bizmplify-thumb.jpg";
 import bizmplifyDetail from "../assets/portfolio/bizmplify-detail.jpg";
+import urpassportThumb from "../assets/portfolio/urpassport-thumb.jpg";
+import urpassportDetail from "../assets/portfolio/urpassport-detail.jpg";
+import trueattendThumb from "../assets/portfolio/trueattend-thumb.jpg";
+import trueattendDetail from "../assets/portfolio/trueattend-detail.jpg";
+import myschoolThumb from "../assets/portfolio/myschool-thumb.png";
+import myschoolDetail from "../assets/portfolio/myschool-detail.jpg";
+import varrachaThumb from "../assets/portfolio/varracha-thumb.jpg";
+import varrachaDetail from "../assets/portfolio/varracha-detail.jpg";
 
 export const projects = [
+  {
+    id: "myschool-smart-management",
+    title: "Myschool – Smart School Management",
+    category: "Mobile",
+    tag: "EdTech",
+    image: myschoolThumb,
+    detailImage: myschoolDetail,
+    description: "A complete smart school management app for tracking attendance, managing reports, timetables, and connecting teachers with students.",
+    longDescription: "Myschool is a smart school management application designed to bring a brighter future to education through technology.\n\nThe app empowers teachers to manage daily student attendance, generate academic reports instantly, and monitor examination performance — all from a single dashboard.\n\nWith dedicated features for homework and timetable management, leave request handling, real-time announcements, and complete student record management, Myschool keeps schools organized, students on track, and parents informed.",
+  },
+  {
+    id: "varracha-photo-club",
+    title: "Varracha Photo Club",
+    category: "Mobile",
+    tag: "Studio Management",
+    image: varrachaThumb,
+    detailImage: varrachaDetail,
+    description: "A studio management app for photographers to manage bookings, clients, availability, and performance all in one place.",
+    longDescription: "Varracha Photo Club is a purpose-built studio management application for professional photographers — helping them capture moments and manage their business effortlessly.\n\nThe app features a category dashboard organizing shoot types (Traditional, Cinematic, Drone, Product Photography, and more), seamless client management, and a real-time availability checker so photographers can view and book slots instantly.\n\nMembership benefits, performance tracking, and note generation round out a complete tool for growing any photography business.",
+  },
+  {
+    id: "urpassport-travel-management",
+    title: "UrPassport Travel Admin Panel",
+    category: "Web",
+    tag: "Travel Management",
+    image: urpassportThumb,
+    detailImage: urpassportDetail,
+    description: "Complete travel management system for your business featuring live trip tracking, booking management, and real-time updates.",
+    longDescription: "UrPassport Admin Panel is a comprehensive travel management system built to streamline operations and improve efficiency for travel businesses.\n\nThe platform provides robust tools including live GPS trip tracking with detailed route history, real-time booking management, and instant updates on every trip.\n\nWith features like smart fleet overview, secure platforms for data, and centralized dashboards for tracking revenue and destinations, UrPassport is the ultimate tool to create, manage, and track trips with ease.",
+  },
+  {
+    id: "trueattend-employee-management",
+    title: "trueAttend Employee Management",
+    category: "Mobile",
+    tag: "HR Tech",
+    image: trueattendThumb,
+    detailImage: trueattendDetail,
+    description: "Smart location-based employee management app featuring real-time check-ins, geo tracking, and automated attendance reports.",
+    longDescription: "trueAttend is a smart employee management and attendance application designed for smarter teams and simpler workflows.\n\nThe app features advanced Smart Geo Selfie Attendance, allowing location-based real-time check-ins and geo-tracking to ensure accuracy.\n\nBeyond basic attendance tracking, trueAttend includes robust leave and holiday management, dynamic task management, and comprehensive employee reporting to keep your workforce organized, productive, and secure.",
+  },
   {
     id: "sourceseas-global-trade",
     title: "SourceSeas Global Trade Platform",
